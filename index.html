@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MoHttp - Mo Http Client Library for Java</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Font Awesome -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+    <!-- Animation -->
+	<link href="css/animate.css" rel="stylesheet" />
+	
+    <!-- MyTemplate CSS -->
+    <link href="css/style.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<header id="header-banner">
+		<nav class="navbar navbar-default navbar-fixed-top fadeIn" role="navigation">
+			<div class="container">
+				
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dropdown-box-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="navbar-brand">
+						<a href="#">Mo Http</a>
+					</div>
+				</div>
+				
+				<!-- Collect the nav links and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="dropdown-box-1">
+					
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#home">HOME</a></li>
+						<li><a href="#introduction">introduction</a></li>
+						<li><a href="#Download" >Download</a></li>
+						<li><a href="#Examples">Examples</a></li>
+						<li><a href="#contactus">CONTACT</a></li>
+					</ul>
+					
+				</div>
+				
+			</div> <!-- /.container -->
+		</nav> <!-- /.nav -->
+	</header>
+		
+	<!-- banner -->
+    <section class="banner" id="home">
+		<div class="container">
+			<div class="slogan">
+				<h2>MO HTTP </h2>
+				<h4>a convenient java http client library,easy to use,high efficiency.</h4>
+			</div>
+			
+			<div class="btn-circle-scroll fadeIn">
+				<a href="#section-footer" class="btn-circle">
+					<i class="fa fa-angle-double-down animated"></i>
+				</a>
+			</div>
+			
+		</div>
+    </section>
+	<!-- /.banner -->
+
+	<!-- aboutus -->
+    <section class="aboutus" id="introduction">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="wow bounceInLeft" data-wow-delay="0.1s"> 
+						<h2>Introduction</h2> 
+					</div>
+					<div class="col-sm-7">
+						<p>HTTP is the way modern applications network. It’s how we exchange data &amp; media. Doing HTTP efficiently makes your stuff load faster and saves bandwidth.</p>
+						<p>MoHttp(Mo = More) is an HTTP client based on java.net.URLConnection which supports: </p>
+						<ul>
+							<li>Request data format</li>
+							<li>Cookie Storage</li>
+							<li>Proxy</li>
+							<li>Https</li>
+							<li>File Upload</li>
+						</ul>
+						<p>Requires:</p>
+						<p>Android 2.3 and above. For Java, the minimum requirement is 1.7.</p>
+					</div>
+					<div class="col-sm-5">
+						<div class="img-aboutus">
+							<div class="wow fadeIn" data-wow-delay="0.2s">
+								<img src="img/aboutus.jpg" alt="" class="img-responsive img-rounded" />
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+	<!-- /.aboutus -->
+	<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >手机网站模板</a></div>
+	<!-- services -->
+    <section class="services" id="Download">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="wow bounceInLeft" data-wow-delay="0.1s">
+					<h2>Download / Maven</h2>
+					</div>
+				</div>				
+			</div>
+			
+			<div class="row-padded" id="first"></div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-sm-7">
+						<h4>Download latest JAR</h4>
+						<p><a href="https://coding.net/u/xcr_abcd/p/MoHttp/git/raw/master/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar" class="btn btn-default" style="background-color: #DE4949;color: #fff1f1;border: none;"><span class="glyphicon glyphicon-download-alt"></span> latest JAR</a></p>
+						<h4>Build Project With Maven</h4>
+						<p>To build a project with maven,you must add the thirdparty repository first.</p>
+						<pre>
+&lt;repositories&gt;
+	&lt;repository&gt;
+		&lt;id&gt;github&lt;/id&gt;
+		&lt;url&gt;https://raw.githubusercontent.com/xcr1234/mohttp/master/mvn-repo&lt;/url&gt;
+	&lt;/repository&gt;
+&lt;/repositories&gt;</pre>
+						<p>then add the dependency.</p>
+						<pre>
+&lt;dependency&gt;
+  &lt;groupId&gt;com.mo&lt;/groupId&gt;
+  &lt;artifactId&gt;moHttp&lt;/artifactId&gt;
+  &lt;version&gt;1.0&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+					</div>
+					
+					
+				</div>				
+			</div>
+			
+		</section>	
+		 <section class="services" id="Examples">	
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="wow bounceInLeft" data-wow-delay="0.1s">
+					<h2>Examples</h2>
+					</div>
+				</div>				
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-sm-8">
+						<h4>Get a URL</h4>
+						<p>This program downloads a URL and print its contents as a string.</p>
+						<pre>
+public static String getUrl(String url) throws IOException, URISyntaxException {
+    return Http.GET(url).execute().string();
+}</pre>	
+						<h4>Post to a Server with cookie storage.</h4>
+						<p>This program posts data to a service.If you use the cookie storage,you must create a Client object first.</p>
+						<pre>
+Response response = Http.<b>newClient</b>().POST("http://www.layoutit.com/en/login/do")
+	.param("login[email]","abcd@qq.com")
+	.param("login[password]","abcd@qq.com")
+	.execute();	
+	
+int code = response.statusCode();
+
+if(code == StatusCode.SC_OK){
+	System.out.println("login failed."); 
+}
+if(code == SC_FOUND){
+	System.out.println("login success."); 
+	// do some thing else
+}
+
+System.out.println(response.string());</pre>
+					<h4>File Upload</h4>
+					<p>just invoke file mthod,file cotent types and content bytes will be written automatically.</p>
+					<pre>
+File file = new File("C:\\myPicture.png");		
+
+Response response = Http.newClient().POST("http://chuantu.biz/upload.php")
+	.param("MAX_FILE_SIZE","200000000")
+    .file("uploadimg",file).execute();
+    
+System.out.println(response.string());
+</pre>
+					</div>
+					
+					
+				</div>				
+			</div>
+		
+		</div>
+	</section>
+	
+	
+	<!-- contact us -->
+	<section class="contactus" id="contactus">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="wow bounceInLeft" data-wow-delay="0.1s">
+					<h2>Get in touch</h2>
+					<p><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=kqehoqeno6agpNLj47zx-f8" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a></p>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+	<!-- /.contact us -->
+	
+	<!-- footer -->
+	<footer id="section-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="wow fadeIn" data-wow-delay="0.4s">
+						<div class="btn-circle-scroll">
+							<a href="#header-banner" class="btn-circle">
+								<i class="fa fa-angle-double-up animated"></i>
+							</a>
+						</div>
+					</div>
+					<p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+				</div>
+			</div>	
+		</div>
+	</footer>
+	<!-- /.footer -->
+	
+	
+	<!-- Core JavaScript Files -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>	
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/wow.min.js"></script>			<!-- Reveal animation when you scroll by wow.js. It need animate.css library -->
+	<!-- Custom Theme JavaScript -->
+	<script src="js/custom.js"></script>
+	
+	<!-- JiaThis Button BEGIN -->
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r3.gif" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</body>
+
+</html>
