@@ -154,6 +154,13 @@ public class Request {
         return agent;
     }
 
+    public Response execURL() throws IOException,URISyntaxException{
+        if(uri == null){
+            throw new NullPointerException("null uri!");
+        }
+        return UrlConnectionExecutor.getInstance().execute(this);
+    }
+
     public Response execute() throws IOException, URISyntaxException {
         if(uri == null){
             throw new NullPointerException("null uri!");

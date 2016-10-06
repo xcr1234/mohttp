@@ -19,6 +19,8 @@ import java.util.Map;
 
 public class UrlConnectionExecutor  implements Executor{
 
+    private UrlConnectionExecutor(){}
+
     public static UrlConnectionExecutor getInstance(){
         synchronized (UrlConnectionExecutor.class){
             if(instance == null){

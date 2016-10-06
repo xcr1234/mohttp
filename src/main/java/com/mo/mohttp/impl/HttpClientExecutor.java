@@ -35,6 +35,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class HttpClientExecutor implements Executor{
 
+    private HttpClientExecutor(){}
+
     public static HttpClientExecutor getInstance(){
         synchronized (HttpClientExecutor.class){
             if(instance == null){
@@ -44,9 +46,13 @@ public class HttpClientExecutor implements Executor{
         }
     }
 
+    public CookieStore getCookieStore(Client client){
+        return clientCookieStoreMap.get(client);
+    }
+
     private static HttpClientExecutor instance;
 
-    Map<Client,CookieStore> clientCookieStoreMap = new ConcurrentHashMap<>();
+    private Map<Client,CookieStore> clientCookieStoreMap = new ConcurrentHashMap<>();
 
     @Override
     public Response execute(Request request)  throws IOException, URISyntaxException {
