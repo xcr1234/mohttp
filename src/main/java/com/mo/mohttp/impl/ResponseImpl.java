@@ -1,5 +1,7 @@
 package com.mo.mohttp.impl;
 
+import com.mo.mohttp.Client;
+import com.mo.mohttp.Request;
 import com.mo.mohttp.Response;
 import com.mo.mohttp.misc.ByteArrayOutputStream;
 import com.mo.mohttp.misc.IOUtils;
@@ -10,6 +12,22 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 
 public abstract class ResponseImpl implements Response {
+
+    private Request request;
+
+    protected ResponseImpl(Request request){
+        this.request = request;
+    }
+
+    @Override
+    public Client getClient() {
+        return request.getClient();
+    }
+
+    @Override
+    public Request getRequest() {
+        return request;
+    }
 
     public String string() throws IOException {
         return IOUtils.toString(stream(), Charset.defaultCharset());

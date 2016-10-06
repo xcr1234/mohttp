@@ -1,6 +1,7 @@
 package com.mo.mohttp.impl;
 
 
+import com.mo.mohttp.Request;
 import com.mo.mohttp.misc.IOUtils;
 
 import java.io.ByteArrayInputStream;
@@ -17,7 +18,8 @@ public class UrlConnectionResponse extends ResponseImpl {
 
     private InputStream inputStream;
 
-    public UrlConnectionResponse(URLConnection urlConnection) throws IOException {
+    public UrlConnectionResponse(URLConnection urlConnection, Request request) throws IOException {
+        super(request);
         this.urlConnection = urlConnection;
         this.inputStream = IOUtils.buffer(urlConnection.getInputStream());
     }

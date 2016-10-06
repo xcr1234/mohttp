@@ -1,6 +1,7 @@
 package com.mo.mohttp.impl;
 
 
+import com.mo.mohttp.Request;
 import com.mo.mohttp.misc.IOUtils;
 import org.apache.http.Header;
 import org.apache.http.HeaderElement;
@@ -19,7 +20,8 @@ public class HttpClientResponse extends ResponseImpl {
 
     private InputStream inputStream;
 
-    public HttpClientResponse(HttpResponse httpResponse) throws IOException {
+    public HttpClientResponse(HttpResponse httpResponse, Request request) throws IOException {
+        super(request);
         this.httpResponse = httpResponse;
         inputStream = IOUtils.buffer(httpResponse.getEntity().getContent());
     }

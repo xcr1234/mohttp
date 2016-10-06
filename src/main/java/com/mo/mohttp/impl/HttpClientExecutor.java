@@ -145,7 +145,7 @@ public class HttpClientExecutor implements Executor{
         }
         try {
             HttpResponse httpResponse = httpClient.execute(httpRequestBase);
-            return new HttpClientResponse(httpResponse);
+            return new HttpClientResponse(httpResponse,request);
         }finally {
             httpRequestBase.abort();
         }

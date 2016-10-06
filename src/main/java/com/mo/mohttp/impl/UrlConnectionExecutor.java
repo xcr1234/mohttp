@@ -109,7 +109,7 @@ public class UrlConnectionExecutor  implements Executor{
                 Map<String, List<String>> headerFields = connection.getHeaderFields();
                 request.getClient().getCookieManager().put(u,headerFields);
             }
-            return new UrlConnectionResponse(connection);
+            return new UrlConnectionResponse(connection,request);
         }finally {
             if(connection!=null&&connection instanceof HttpURLConnection){
 

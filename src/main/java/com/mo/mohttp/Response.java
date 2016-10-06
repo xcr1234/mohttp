@@ -26,4 +26,8 @@ public interface Response {
     String encoding();
 
     Map<String,List<String>> getHeaders();
+
+    Client getClient();
+
+    Request getRequest();
 }
