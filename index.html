@@ -20,6 +20,18 @@
 	
     <!-- MyTemplate CSS -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+    	.redBtn{
+    		background-color: #DE4949;
+    		color: #fff1f1;
+    		border: none;
+    	}
+    	.redBtn:hover{
+    		color: #F9F4F4;
+			background-color: #ec3c16;
+    	}
+    </style>
 	
 </head>
 
@@ -51,7 +63,7 @@
 						<li><a href="#Download" >Download</a></li>
 						<li><a href="#Examples">Examples</a></li>
 						<li><a href="#contactus">CONTACT</a></li>
-						<li><img src="img/icon-github.png" onclick="window.open('https://github.com/xcr1234/mohttp/')" style="width: 30px;height: 30px;margin-top: 5px;margin-left:5px;cursor: pointer;"></li>
+						<li><a href="https://github.com/xcr1234/mohttp/" target="_blank" hidefocus="true"><img src="img/icon-github.png" style="width: 30px;height: 30px;margin-top: -5px;margin-left:5px;"></a></li>
 					</ul>
 					
 				</div>
@@ -128,8 +140,12 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="col-sm-7">
-						<h4>Download latest JAR</h4>
-						<p><a href="https://coding.net/u/xcr_abcd/p/MoHttp/git/raw/master/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar" class="btn btn-default" style="background-color: #DE4949;color: #fff1f1;border: none;"><span class="glyphicon glyphicon-download-alt"></span> latest JAR</a></p>
+						<h4>Download latest JAR / SRC</h4>
+						<p>
+							<a href="https://coding.net/u/xcr_abcd/p/MoHttp/git/raw/master/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar" hidefocus="true" class="btn btn-default redBtn"><span class="glyphicon glyphicon-download-alt"></span> latest JAR</a> 
+							<a href="https://github.com/xcr1234/mohttp/archive/master.zip" hidefocus="true" class="btn btn-default redBtn"><span class="glyphicon glyphicon-eye-open"></span> Download full sources</a>
+							<a href="https://github.com/xcr1234/mohttp/" target="_blank" class="btn btn-default redBtn" hidefocus="true"><span class="glyphicon glyphicon-edit"></span> View on Github</a>
+						</p>
 						<h4>Build Project With Maven</h4>
 						<p>To build a project with maven,you must add the thirdparty repository first.</p>
 						<pre>
@@ -262,8 +278,10 @@ System.out.println(response.string());
 	<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r3.gif" charset="utf-8"></script>
 	<!-- JiaThis Button END -->
 	
-	<script type="text/javascript" src="js/uyan.js"></script>
+	<!-- UY BEGIN -->
 
+	<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+	<!-- UY END -->
 </body>
 
 </html>
