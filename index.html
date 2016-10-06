@@ -249,9 +249,9 @@ response.getClient(); //get Client from Response
 java.net.CookieManager cookieManager = client.getCookieManager();
 java.net.CookieStore cookieStore = client.getCookieStore();</pre>
 							<p>if you are working with apache HttpClient,cookies are no longer stored in java.net.CookieStore, instead of org.apache.http.client.CookieStore</p>
-<pre>
+							<pre>
 org.apache.http.client.CookieStore cookieStore = 
-	HttpClientExecutor.getInstance().getCookieStore(client);</pre>						
+	HttpClientExecutor.getInstance().getCookieStore(client);</pre>
 						</div>
 
 					</div>
@@ -267,7 +267,22 @@ org.apache.http.client.CookieStore cookieStore =
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="wow bounceInLeft" data-wow-delay="0.1s">
 							<h2>Get in touch</h2>
-							<div id="uyan_frame"></div>
+							
+
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "9bfbb4bb4e8945abb94017392c0a2c5a",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+
+
 							<p>Contact with me :
 								<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=kqehoqeno6agpNLj47zx-f8" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png" /></a>
 							</p>
@@ -292,7 +307,11 @@ org.apache.http.client.CookieStore cookieStore =
 							</div>
 						</div>
 						<p>Copyright &copy; 2015.Company name All rights reserved.
-							<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260538308'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1260538308%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p>
+							<script type="text/javascript">
+								var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+								document.write(unescape("%3Cspan id='cnzz_stat_icon_1260538308'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1260538308%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+							</script>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -309,14 +328,32 @@ org.apache.http.client.CookieStore cookieStore =
 		<!-- Custom Theme JavaScript -->
 		<script src="js/custom.js"></script>
 
-		<!-- JiaThis Button BEGIN -->
-		<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r3.gif" charset="utf-8"></script>
-		<!-- JiaThis Button END -->
-
-		<!-- UY BEGIN -->
-
-		<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
-		<!-- UY END -->
+		<!--
+			baidu share static版
+			https://github.com/hrwhisper/baiduShare
+			如果有404的错误，需要打开static/api/share.js
+			修改staticUrl:"/"为staticUrl:""
+		-->
+		<script>
+			window._bd_share_config = {
+				"common": {
+					"bdSnsKey": {},
+					"bdText": "",
+					"bdMini": "2",
+					"bdMiniList": false,
+					"bdPic": "",
+					"bdStyle": "0",
+					"bdSize": "16"
+				},
+				"slide": {
+					"type": "slide",
+					"bdImg": "0",
+					"bdPos": "right",
+					"bdTop": "100"
+				}
+			};
+			with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+		</script>
 	</body>
 
 </html>
