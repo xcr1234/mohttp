@@ -20,7 +20,11 @@
 
 		<!-- MyTemplate CSS -->
 		<link href="css/style.css" rel="stylesheet">
-
+		
+		<!-- highlight.js	-->
+		<link href="//cdn.bootcss.com/highlight.js/9.7.0/styles/googlecode.min.css" rel="stylesheet">
+		<script src="//cdn.bootcss.com/highlight.js/9.7.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 		<style>
 			.redBtn {
 				background-color: #DE4949;
@@ -167,20 +171,20 @@
 							</p>
 							<h4>Build Project With Maven</h4>
 							<p>To build a project with maven,you must add the thirdparty repository first.</p>
-							<pre>
+							<pre><code class="xml">
 &lt;repositories&gt;
 	&lt;repository&gt;
 		&lt;id&gt;github&lt;/id&gt;
 		&lt;url&gt;https://raw.githubusercontent.com/xcr1234/mohttp/master/mvn-repo&lt;/url&gt;
 	&lt;/repository&gt;
-&lt;/repositories&gt;</pre>
+&lt;/repositories&gt;</code></pre><code class="xml">
 							<p>then add the dependency.</p>
 							<pre>
 &lt;dependency&gt;
   &lt;groupId&gt;com.mo&lt;/groupId&gt;
   &lt;artifactId&gt;moHttp&lt;/artifactId&gt;
   &lt;version&gt;1.0&lt;/version&gt;
-&lt;/dependency&gt;</pre>
+&lt;/dependency&gt;</code></pre>
 							<h4>Working with apache HttpClient</h4>
 							<p>if you include apache HttpClient in the classpath,mohttp will automatically work with HttpClient.</p>
 							<p>Requirement:</p>
@@ -205,13 +209,14 @@
 						<div class="col-sm-8">
 							<h4>Get a URL</h4>
 							<p>This program downloads a URL and print its contents as a string.</p>
-							<pre>
+							<pre><code class="java">
 public static String getUrl(String url) throws IOException, URISyntaxException {
-    return Http.GET(url).execute().string();
-}</pre>
+	return Http.GET(url).execute().string();
+	// return Http.GET(url).execute().string("UTF-8");
+}</code></pre>
 							<h4>Post to a Server with cookie storage.</h4>
 							<p>This program posts data to a service.If you use the cookie storage,you must create a Client object first.</p>
-							<pre>
+							<pre><code class="java">
 Response response = Http.<b>newClient</b>().POST("http://www.layoutit.com/en/login/do")
 	.param("login[email]","abcd@qq.com")
 	.param("login[password]","abcd@qq.com")
@@ -227,10 +232,10 @@ if(code == StatusCode.SC_FOUND){
 	// do some thing else
 }
 
-System.out.println(response.string());</pre>
+System.out.println(response.string());</code></pre>
 							<h4>File Upload</h4>
 							<p>just invoke file mthod,file cotent types and content bytes will be written automatically.</p>
-							<pre>
+							<pre><code class="java">
 File file = new File("C:\\myPicture.png");		
 
 Response response = Http.newClient().POST("http://chuantu.biz/upload.php")
@@ -238,23 +243,23 @@ Response response = Http.newClient().POST("http://chuantu.biz/upload.php")
     .file("uploadimg",file).execute();
     
 System.out.println(response.string());
-</pre>
+</code></pre>
 							<h4>Get Cookies from header.</h4>
 							<p>cookies are stored in java.net.CookieStore,which is in Client object.</p>
-							<pre>
+							<pre><code class="java">
 Http.newClient();  //create Client
 
 request.getClient(); //get Client from Request
 response.getClient(); //get Client from Response
 
 //get CookieManager and CookieStore.
-java.net.CookieManager cookieManager = client.getCookieManager();
-java.net.CookieStore cookieStore = client.getCookieStore();</pre>
+<span class="hljs-title">java.net.CookieManager</span> cookieManager = client.getCookieManager();
+<span class="hljs-title">java.net.CookieStore</span> cookieStore = client.getCookieStore();</code></pre>
 							<p>if you are working with apache HttpClient,cookies are no longer stored in java.net.CookieStore, instead of org.apache.http.client.CookieStore</p>
-							<pre>
-org.apache.http.client.CookieStore cookieStore = 
+							<pre><code class="java">
+<span class="hljs-title">org.apache.http.client.CookieStore</span> cookieStore = 
 	HttpClientExecutor.getInstance().getCookieStore(client);</pre>
-						</div>
+						</code></div>
 
 					</div>
 				</div>
