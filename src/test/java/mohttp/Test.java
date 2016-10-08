@@ -17,12 +17,11 @@ public class Test {
 
         Client client = Http.newClient();
 
-        Request request = new Request(client);
 
-        request.uri("http://apis.baidu.com/heweather/weather/free").method(Method.GET)
-                .header(Headers.host,"apis.baidu.com")
-            .header("apikey","5eca5cdb5c9b5f390fb24f7f2e3f0148").agent(Agents.Chrome)
-            .param("city","北京");
+        final Request request = client.uri("http://apis.baidu.com/heweather/weather/free").method(Method.GET)
+                .header(Headers.host, "apis.baidu.com")
+                .header("apikey", "5eca5cdb5c9b5f390fb24f7f2e3f0148").agent(Agents.Chrome)
+                .param("city", "北京");
 
         Response response = request.execute();
 

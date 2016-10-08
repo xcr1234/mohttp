@@ -65,10 +65,10 @@ public class Client {
     }
 
     public Request uri(URI uri){
-        return new Request(this).uri(uri);
+        return new Request(this,uri);
     }
 
     public Request uri(String uri){
-        return new Request(this).uri(uri);
+        return new Request(this,uri);
     }
 }

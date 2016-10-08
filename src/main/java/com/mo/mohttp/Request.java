@@ -35,18 +35,35 @@ public class Request {
 
     private String agent;
 
-
-    public Request(Client client){
-        this();
+    public Request(Client client,String uri){
+        if(uri==null){
+            throw new NullPointerException("null uri");
+        }
+        init();
         this.client = client;
+        this.uri = URI.create(uri);
     }
 
-    public Request(){
+
+    public Request(Client client,URI uri){
+        if(uri==null){
+            throw new NullPointerException("null uri");
+        }
+        init();
+        this.client = client;
+        this.uri = uri;
+    }
+
+
+
+    private void init(){
         method = Http.Method.GET;
         headerList = new ArrayList<>();
         paramList = new ArrayList<>();
         fileList = new ArrayList<>();
     }
+
+
 
     public Request uri(URI uri){
         this.uri = uri;

@@ -10,6 +10,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.List;
 
 public abstract class ResponseImpl implements Response {
 
@@ -37,6 +38,11 @@ public abstract class ResponseImpl implements Response {
         return IOUtils.toString(stream(),encoding);
     }
 
+    @Override
+    public String string(Charset charset) throws IOException {
+        return IOUtils.toString(stream(),charset);
+    }
+
     public BufferedImage image() throws IOException {
         return ImageIO.read(stream());
     }
@@ -45,5 +51,10 @@ public abstract class ResponseImpl implements Response {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         IOUtils.copy(stream(),byteArrayOutputStream);
         return byteArrayOutputStream.toByteArray();
+    }
+
+    @Override
+    public List<String> getHeader(String key) {
+        return getHeaders().get(key);
     }
 }
