@@ -58,7 +58,11 @@ public class UrlConnectionExecutor  implements Executor{
             if(connection instanceof HttpURLConnection){
                 HttpURLConnection httpURLConnection = (HttpURLConnection)connection;
                 httpURLConnection.setRequestMethod(request.getMethod().name());
-                httpURLConnection.setInstanceFollowRedirects(false);
+                if(request.getAllowRedirect()!=null){
+                    httpURLConnection.setInstanceFollowRedirects(request.getAllowRedirect());
+                }else {
+                    httpURLConnection.setInstanceFollowRedirects(false);
+                }
             }
             if(request.getTimeout()!=null){
                 connection.setConnectTimeout(request.getTimeout());

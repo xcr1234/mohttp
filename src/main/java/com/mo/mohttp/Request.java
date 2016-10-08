@@ -35,6 +35,8 @@ public class Request {
 
     private String agent;
 
+    private Boolean allowRedirect;
+
     public Request(Client client,String uri){
         if(uri==null){
             throw new NullPointerException("null uri");
@@ -130,6 +132,13 @@ public class Request {
         return this;
     }
 
+    public Request allowRedirect(boolean allowRedirect){
+        this.allowRedirect = allowRedirect;
+        return this;
+    }
+
+
+
     public Client getClient() {
         return client;
     }
@@ -161,6 +170,10 @@ public class Request {
 
     public Integer getTimeout() {
         return timeout;
+    }
+
+    public Boolean getAllowRedirect() {
+        return allowRedirect;
     }
 
     public Charset getCharset() {

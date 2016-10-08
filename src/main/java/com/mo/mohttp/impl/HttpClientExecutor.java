@@ -111,7 +111,10 @@ public class HttpClientExecutor implements Executor{
         if(time!=null){
             builder.setConnectTimeout(time).setSocketTimeout(time).setConnectionRequestTimeout(time);
         }
-        if(request.getProxy()!=null){
+        if(request.getAllowRedirect()!=null){
+            builder.setRedirectsEnabled(request.getAllowRedirect());
+        }
+        if(request.getProxy()!=null&&request.getProxy().address() instanceof InetSocketAddress){
             Proxy proxy = request.getProxy();
             InetSocketAddress address = (InetSocketAddress) proxy.address();
             HttpHost httpHost = new HttpHost(address.getAddress());
