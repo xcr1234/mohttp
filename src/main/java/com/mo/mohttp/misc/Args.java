@@ -3,7 +3,9 @@ package com.mo.mohttp.misc;
 
 import java.util.Collection;
 
-public class Args {
+public final class Args {
+
+    private Args(){}
 
     public static void check(final boolean expression, final String message) {
         if (!expression) {

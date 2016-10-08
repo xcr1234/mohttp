@@ -89,8 +89,12 @@ public class UrlConnectionExecutor  implements Executor{
 
 
             }
+            boolean flag = true;
             for(NameValuePair pair:request.getHeaderList()){
                 connection.setRequestProperty(pair.getName(),pair.getValue());
+                if(Headers.contentType.equalsIgnoreCase(pair.getName())){
+                    flag = false;
+                }
             }
 
             if(writeData){
@@ -101,7 +105,8 @@ public class UrlConnectionExecutor  implements Executor{
                 }else{
                     entity = new FileMultipartEntity(paramList,fileList,charset);
                 }
-                connection.setRequestProperty(Headers.contentType,entity.getContentType());
+
+                if(flag) connection.setRequestProperty(Headers.contentType,entity.getContentType());
                 DataOutputStream outputStream = new DataOutputStream(connection.getOutputStream());
                 entity.writeTo(outputStream);
             }

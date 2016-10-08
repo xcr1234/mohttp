@@ -15,6 +15,8 @@ import java.util.Random;
  */
 public final class TextUtils {
 
+    private TextUtils(){}
+
     /**
      * Returns true if the parameter is null or of zero length
      */

@@ -5,20 +5,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar.md5" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar.md5" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar.sha1" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar.sha1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.pom" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.pom" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.pom.md5" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.pom.md5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.pom.sha1" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.pom.sha1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml.md5" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml.md5" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml.sha1" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml.sha1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Client.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Http.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Http.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Request.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Request.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Response.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Response.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/ResponseImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/ResponseImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/Args.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/Args.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mohttp/Test.java" afterPath="$PROJECT_DIR$/src/test/java/mohttp/Test.java" />
     </list>
     <ignored path="mohttp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +53,8 @@
       <file leaf-file-name="Request.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Request.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+            <state relative-caret-position="247">
+              <caret line="192" column="25" selection-start-line="192" selection-start-column="25" selection-end-line="192" selection-end-column="25" />
               <folding>
                 <element signature="e#2715#2716#0" expanded="true" />
                 <element signature="e#2744#2745#0" expanded="true" />
@@ -74,12 +66,22 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
+            <state relative-caret-position="419">
               <caret line="71" column="35" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="35" />
               <folding>
                 <element signature="e#1433#1434#0" expanded="true" />
                 <element signature="e#1477#1478#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Http.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Http.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,7 +100,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/HttpClientResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/HttpClientExecutor.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -111,6 +112,7 @@
         <option value="$PROJECT_DIR$/src/test/java/mohttp/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/Args.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java" />
       </list>
     </option>
   </component>
@@ -906,16 +908,16 @@
       <updated>1475735344259</updated>
       <workItem from="1475735349481" duration="319000" />
       <workItem from="1475752792803" duration="312000" />
-      <workItem from="1475943318852" duration="892000" />
+      <workItem from="1475943318852" duration="3040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1523000" />
+    <option name="totallyTimeSpent" value="3671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -927,12 +929,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2473525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -991,13 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -1039,14 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="111" column="63" selection-start-line="111" selection-start-column="63" selection-end-line="111" selection-end-column="63" />
           <folding />
         </state>
       </provider>
@@ -1107,36 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="71" column="35" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="35" />
-          <folding>
-            <element signature="e#1433#1434#0" expanded="true" />
-            <element signature="e#1477#1478#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Http.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/IOUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="703">
@@ -1169,10 +1126,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_73/src.zip!/java/net/URI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="847" column="22" selection-start-line="847" selection-start-column="22" selection-end-line="847" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Http.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="71" column="35" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="35" />
+          <folding>
+            <element signature="e#1433#1434#0" expanded="true" />
+            <element signature="e#1477#1478#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Executor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="100" column="45" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/Request.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        <state relative-caret-position="247">
+          <caret line="192" column="25" selection-start-line="192" selection-start-column="25" selection-end-line="192" selection-end-column="25" />
           <folding>
             <element signature="e#2715#2716#0" expanded="true" />
             <element signature="e#2744#2745#0" expanded="true" />
