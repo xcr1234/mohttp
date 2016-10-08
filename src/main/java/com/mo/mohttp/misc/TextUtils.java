@@ -4,8 +4,10 @@ package com.mo.mohttp.misc;
 import com.mo.mohttp.apache.URIBuilder;
 import com.mo.mohttp.http.NameValuePair;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Random;
@@ -77,7 +79,10 @@ public final class TextUtils {
         return name.substring(i+1);
     }
 
-    public static URI buildURI(URI uri, Charset charset, List<NameValuePair> paramList) throws URISyntaxException {
+    public static URI buildURI(URI uri, Charset charset, List<NameValuePair> paramList) throws URISyntaxException, UnsupportedEncodingException {
+        if(paramList.isEmpty()){
+            return URI.create(URLEncoder.encode(uri.toString(),charset.displayName()));
+        }
         URIBuilder uriBuilder = new URIBuilder(uri);
         if(charset!=null){
             uriBuilder.setCharset(charset);

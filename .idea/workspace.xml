@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e376a0f-a96e-434f-9c40-1cac70e634f6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Request.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Request.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/HttpClientExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/HttpClientExecutor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar.md5" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar.md5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar.sha1" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/1.0/moHttp-1.0.jar.sha1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml.md5" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml.md5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml.sha1" afterPath="$PROJECT_DIR$/mvn-repo/com/mo/moHttp/maven-metadata.xml.sha1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java" />
     </list>
     <ignored path="mohttp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,21 +48,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UrlConnectionResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionResponse.java">
+      <file leaf-file-name="UrlConnectionExecutor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state relative-caret-position="152">
+              <caret line="47" column="61" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpClientExecutor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/HttpClientExecutor.java">
+      <file leaf-file-name="TextUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="135" column="74" selection-start-line="135" selection-start-column="56" selection-end-line="135" selection-end-column="74" />
+            <state relative-caret-position="222">
+              <caret line="83" column="45" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="URLEncoder.java" pinned="false" current-in-tab="true">
+        <entry file="jar://D:/Java/jdk1.8.0_73/src.zip!/java/net/URLEncoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="288" column="0" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,8 +84,25 @@
             <state relative-caret-position="912">
               <caret line="71" column="35" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="35" />
               <folding>
-                <element signature="e#1433#1434#0" expanded="true" />
-                <element signature="e#1477#1478#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#494#495#0" expanded="false" />
+                <element signature="e#524#525#0" expanded="false" />
+                <element signature="e#560#561#0" expanded="false" />
+                <element signature="e#592#593#0" expanded="false" />
+                <element signature="e#856#857#0" expanded="false" />
+                <element signature="e#887#888#0" expanded="false" />
+                <element signature="e#924#925#0" expanded="false" />
+                <element signature="e#955#956#0" expanded="false" />
+                <element signature="e#990#991#0" expanded="false" />
+                <element signature="e#1046#1047#0" expanded="false" />
+                <element signature="e#1084#1085#0" expanded="false" />
+                <element signature="e#1140#1141#0" expanded="false" />
+                <element signature="e#1182#1183#0" expanded="false" />
+                <element signature="e#1235#1236#0" expanded="false" />
+                <element signature="e#1282#1283#0" expanded="false" />
+                <element signature="e#1318#1319#0" expanded="false" />
+                <element signature="e#1352#1353#0" expanded="false" />
+                <element signature="e#1396#1397#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -122,11 +153,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Http.java" />
         <option value="$PROJECT_DIR$/src/test/java/mohttp/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/Args.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/HttpClientExecutor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java" />
       </list>
     </option>
   </component>
@@ -953,16 +984,16 @@
       <workItem from="1475735349481" duration="319000" />
       <workItem from="1475752792803" duration="312000" />
       <workItem from="1475943318852" duration="3101000" />
-      <workItem from="1475946928342" duration="225000" />
+      <workItem from="1475946928342" duration="548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3957000" />
+    <option name="totallyTimeSpent" value="4280000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -973,7 +1004,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1027,7 +1058,7 @@
         <state relative-caret-position="3078">
           <caret line="193" column="5" selection-start-line="193" selection-start-column="5" selection-end-line="193" selection-end-column="5" />
           <folding>
-            <element signature="e#3475#3476#0" expanded="true" />
+            <element signature="e#3475#3476#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1037,8 +1068,25 @@
         <state relative-caret-position="912">
           <caret line="71" column="35" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="35" />
           <folding>
-            <element signature="e#1433#1434#0" expanded="true" />
-            <element signature="e#1477#1478#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#494#495#0" expanded="false" />
+            <element signature="e#524#525#0" expanded="false" />
+            <element signature="e#560#561#0" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#856#857#0" expanded="false" />
+            <element signature="e#887#888#0" expanded="false" />
+            <element signature="e#924#925#0" expanded="false" />
+            <element signature="e#955#956#0" expanded="false" />
+            <element signature="e#990#991#0" expanded="false" />
+            <element signature="e#1046#1047#0" expanded="false" />
+            <element signature="e#1084#1085#0" expanded="false" />
+            <element signature="e#1140#1141#0" expanded="false" />
+            <element signature="e#1182#1183#0" expanded="false" />
+            <element signature="e#1235#1236#0" expanded="false" />
+            <element signature="e#1282#1283#0" expanded="false" />
+            <element signature="e#1318#1319#0" expanded="false" />
+            <element signature="e#1352#1353#0" expanded="false" />
+            <element signature="e#1396#1397#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1085,7 +1133,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3475#3476#0" expanded="true" />
+            <element signature="e#3475#3476#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1135,17 +1183,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_73/src.zip!/java/net/URLEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="80" column="3" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/FormUrlencodedEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,13 +1214,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/mohttp/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1191,6 +1226,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,8 +1264,25 @@
         <state relative-caret-position="912">
           <caret line="71" column="35" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="35" />
           <folding>
-            <element signature="e#1433#1434#0" expanded="true" />
-            <element signature="e#1477#1478#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#494#495#0" expanded="false" />
+            <element signature="e#524#525#0" expanded="false" />
+            <element signature="e#560#561#0" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#856#857#0" expanded="false" />
+            <element signature="e#887#888#0" expanded="false" />
+            <element signature="e#924#925#0" expanded="false" />
+            <element signature="e#955#956#0" expanded="false" />
+            <element signature="e#990#991#0" expanded="false" />
+            <element signature="e#1046#1047#0" expanded="false" />
+            <element signature="e#1084#1085#0" expanded="false" />
+            <element signature="e#1140#1141#0" expanded="false" />
+            <element signature="e#1182#1183#0" expanded="false" />
+            <element signature="e#1235#1236#0" expanded="false" />
+            <element signature="e#1282#1283#0" expanded="false" />
+            <element signature="e#1318#1319#0" expanded="false" />
+            <element signature="e#1352#1353#0" expanded="false" />
+            <element signature="e#1396#1397#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1246,7 +1299,7 @@
         <state relative-caret-position="323">
           <caret line="174" column="39" selection-start-line="174" selection-start-column="39" selection-end-line="174" selection-end-column="39" />
           <folding>
-            <element signature="e#3475#3476#0" expanded="true" />
+            <element signature="e#3475#3476#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1255,6 +1308,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1269,24 +1330,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="63" column="70" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        <state relative-caret-position="152">
+          <caret line="47" column="61" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/HttpClientExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="-170">
           <caret line="135" column="74" selection-start-line="135" selection-start-column="56" selection-end-line="135" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="83" column="45" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_73/src.zip!/java/net/URLEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="288" column="0" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
           <folding />
         </state>
       </provider>
