@@ -80,9 +80,6 @@ public final class TextUtils {
     }
 
     public static URI buildURI(URI uri, Charset charset, List<NameValuePair> paramList) throws URISyntaxException, UnsupportedEncodingException {
-        if(paramList.isEmpty()){
-            return URI.create(URLEncoder.encode(uri.toString(),charset.displayName()));
-        }
         URIBuilder uriBuilder = new URIBuilder(uri);
         if(charset!=null){
             uriBuilder.setCharset(charset);
