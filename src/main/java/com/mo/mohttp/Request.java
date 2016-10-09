@@ -1,11 +1,15 @@
 package com.mo.mohttp;
 
 
+import com.mo.mohttp.apache.CharArrayBuffer;
+import com.mo.mohttp.constant.ContentType;
+import com.mo.mohttp.constant.Headers;
 import com.mo.mohttp.http.NameFilePair;
 import com.mo.mohttp.http.NameValuePair;
 
 import com.mo.mohttp.impl.HttpClientExecutor;
 import com.mo.mohttp.impl.UrlConnectionExecutor;
+import org.apache.http.entity.StringEntity;
 
 
 import java.io.*;
@@ -13,6 +17,8 @@ import java.net.*;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+
+import static javafx.scene.input.KeyCode.R;
 
 public class Request {
     private URI uri;
@@ -36,6 +42,19 @@ public class Request {
     private String agent;
 
     private Boolean allowRedirect;
+
+    private StringBuilder stringEntity;
+
+
+
+    public Request(String uri){
+        this(null,uri);
+    }
+
+    public Request(URI uri){
+        this(null,uri);
+    }
+
 
     public Request(Client client,String uri){
         if(uri==null){
@@ -64,8 +83,6 @@ public class Request {
         paramList = new ArrayList<>();
         fileList = new ArrayList<>();
     }
-
-
 
     public Request uri(URI uri){
         this.uri = uri;
@@ -137,7 +154,34 @@ public class Request {
         return this;
     }
 
+    @Deprecated
+    public StringBuilder getStringEntity() {
+        return stringEntity;
+    }
 
+    public StringBuilder stringEntity(String str){
+        return stringEntity.append(str);
+    }
+
+    public StringBuilder stringEntity() {
+        if(!fileList.isEmpty()||!paramList.isEmpty()){
+            throw new IllegalStateException("cannot get string entity while file or param entity is not empty!");
+        }
+        if(stringEntity == null){
+            stringEntity = new StringBuilder();
+        }
+        return stringEntity;
+    }
+
+    public Request xmlContent(String xml){
+        stringEntity().append(xml);
+        return header(Headers.contentType, ContentType.findMimeByExtension("xml"));
+    }
+
+    public Request jsonContent(String json){
+        stringEntity.append(json);
+        return header(Headers.contentType,ContentType.findMimeByExtension("json"));
+    }
 
     public Client getClient() {
         return client;

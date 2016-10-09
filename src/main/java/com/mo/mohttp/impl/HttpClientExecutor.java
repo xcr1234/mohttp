@@ -16,6 +16,7 @@ import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpRequestBase;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.BasicCookieStore;
@@ -143,6 +144,9 @@ public class HttpClientExecutor implements Executor{
                     entityBuilder.addTextBody(pair.getName(),pair.getValue());
                 }
                 entity = entityBuilder.build();
+            }
+            if(request.getStringEntity()!=null){
+                entity = new StringEntity(request.getStringEntity().toString(),charset);
             }
             mo.setEntity(entity);
         }

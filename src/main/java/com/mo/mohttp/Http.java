@@ -20,19 +20,19 @@ public final class Http {
 
 
     public static Request GET(URI uri){
-        return new Request(null,uri);
+        return new Request(uri);
     }
 
     public static Request GET(String uri){
-        return new Request(null,uri);
+        return new Request(uri);
     }
 
     public static Request POST(String uri){
-        return new Request(null,uri).method(Method.POST);
+        return new Request(uri).method(Method.POST);
     }
 
     public static Request POST(URI uri){
-        return new Request(null,uri).method(Method.POST);
+        return new Request(uri).method(Method.POST);
     }
 
     /**

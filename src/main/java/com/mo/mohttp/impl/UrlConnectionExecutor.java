@@ -113,6 +113,11 @@ public class UrlConnectionExecutor  implements Executor{
                 if(flag) connection.setRequestProperty(Headers.contentType,entity.getContentType());
                 DataOutputStream outputStream = new DataOutputStream(connection.getOutputStream());
                 entity.writeTo(outputStream);
+
+                if(request.getStringEntity()!=null){
+                    outputStream.writeBytes(request.getStringEntity().toString());
+                }
+
             }
             if (request.getClient()!=null){
                 Map<String, List<String>> headerFields = connection.getHeaderFields();
