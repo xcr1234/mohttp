@@ -17,6 +17,8 @@ public final class ContentType {
 
     public static final String XML = "text/xml";
 
+    public static final String TXT = "text/plain";
+
 
 
 

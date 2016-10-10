@@ -46,4 +46,20 @@ public class UrlConnectionResponse extends ResponseImpl {
     public Map<String,List<String>> getHeaders(){
         return urlConnection.getHeaderFields();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        UrlConnectionResponse that = (UrlConnectionResponse) o;
+
+        return urlConnection != null ? urlConnection.equals(that.urlConnection) : that.urlConnection == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return urlConnection != null ? urlConnection.hashCode() : 0;
+    }
 }

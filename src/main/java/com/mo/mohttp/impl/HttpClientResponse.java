@@ -54,4 +54,25 @@ public class HttpClientResponse extends ResponseImpl {
         }
         return map;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        HttpClientResponse that = (HttpClientResponse) o;
+
+        return httpResponse != null ? httpResponse.equals(that.httpResponse) : that.httpResponse == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return httpResponse != null ? httpResponse.hashCode() : 0;
+    }
+
+    @Override
+    public String toString() {
+        return httpResponse.toString();
+    }
 }

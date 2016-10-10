@@ -35,15 +35,21 @@ public class UrlConnectionExecutor  implements Executor{
     @Override
     public Response execute(Request request) throws IOException, URISyntaxException {
         boolean writeData = request.getMethod() != Http.Method.GET;
-        if(!writeData&&!request.getFileList().isEmpty()){
-            throw new IllegalStateException("GET method does not support file upload connection!");
-        }
+
+
         Charset charset = request.getCharset();
         if(request.getCharset() == null){
             charset = Charset.defaultCharset();
         }
         List<NameValuePair> paramList = request.getParamList();
         List<NameFilePair> fileList = request.getFileList();
+        StringBuilder stringEntity = request.getStringEntity();
+        if(!writeData&&!fileList.isEmpty()){
+            throw new IllegalStateException("GET method does not support file upload connection!");
+        }
+        if(stringEntity!=null&&(!fileList.isEmpty()||!paramList.isEmpty())){
+            throw new IllegalStateException("cannot get string entity while file or param entity is not empty!");
+        }
 
         URI u = writeData ? request.getUri(): TextUtils.buildURI(request.getUri(),charset,request.getParamList());
         URLConnection connection = null;
@@ -110,19 +116,21 @@ public class UrlConnectionExecutor  implements Executor{
                     entity = new FileMultipartEntity(paramList,fileList,charset);
                 }
 
+                if(stringEntity!=null){
+                    entity = new StringEntity(stringEntity.toString());
+                }
+
                 if(flag) connection.setRequestProperty(Headers.contentType,entity.getContentType());
                 DataOutputStream outputStream = new DataOutputStream(connection.getOutputStream());
                 entity.writeTo(outputStream);
 
-                if(request.getStringEntity()!=null){
-                    outputStream.writeBytes(request.getStringEntity().toString());
-                }
 
             }
             if (request.getClient()!=null){
                 Map<String, List<String>> headerFields = connection.getHeaderFields();
                 request.getClient().getCookieManager().put(u,headerFields);
             }
+
             return new UrlConnectionResponse(connection,request);
         }finally {
             if(connection!=null&&connection instanceof HttpURLConnection){
