@@ -1,6 +1,9 @@
 package com.mo.mohttp.constant;
 
-
+/**
+ * http响应状态码
+ * https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+ */
 public final class StatusCode {
     private StatusCode(){}
     public static final int SC_CONTINUE = 100;

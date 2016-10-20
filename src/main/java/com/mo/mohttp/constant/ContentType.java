@@ -3,6 +3,9 @@ package com.mo.mohttp.constant;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 表示常见的 ContentType，和用后缀名寻找ContentType
+ */
 public final class ContentType {
 
     private ContentType(){}
@@ -25,6 +28,11 @@ public final class ContentType {
 
     private static Map<String,String> mapping;
 
+    /**
+     * 根据文件的后缀名返回对应的ContentType(Mime Type)
+     * @param key 文件后缀名，例如："txt"
+     * @return 返回对应的ContentType，如果找不到后缀名则返回"application/octet-stream"（ContentType.FILE_DEFAULT）
+     */
     public static String findMimeByExtension(String key){
         if(key==null||key.isEmpty()){
             return FILE_DEFAULT;

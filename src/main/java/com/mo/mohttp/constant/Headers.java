@@ -1,6 +1,8 @@
 package com.mo.mohttp.constant;
 
-
+/**
+ * 常见的http请求头
+ */
 public final class Headers {
     private Headers(){}
 

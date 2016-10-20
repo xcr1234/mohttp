@@ -5,6 +5,8 @@ import java.net.URI;
 
 /**
  * 进行http(https)请求的公共类。
+ * Doc:
+ * https://xcr1234.github.io/mohttp/
  */
 public final class Http {
 

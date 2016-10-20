@@ -7,6 +7,24 @@ import java.net.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Http客户端连接，用于存储cookie和一些公共的配置信息。
+ *
+ * 实例方法：
+ * Client client = new Client();
+ * 或者
+ * Client client = Http.newClient();
+ *
+ * 从client中得到存储的cookie：
+ * java.net.CookieManager cookieManager = client.getCookieManager();
+ * java.net.CookieStore cookieStore = client.getCookieStore();
+ * 如果classpath中有httpclient，则应该是：
+ * org.apache.http.client.CookieStore cookieStore =
+    HttpClientExecutor.getInstance().getCookieStore(client);
+ * @see CookieManager
+ * @see CookieStore
+ * @see org.apache.http.client.CookieStore
+ */
 public class Client {
 
     private CookieManager cookieManager;
