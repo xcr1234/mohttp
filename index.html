@@ -4,9 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
-		<meta name="author" content="">
-
+		
 		<title>MoHttp - A convenient java http client library,easy to use,high efficiency.</title>
 
 		<!-- Bootstrap Core CSS -->
@@ -115,7 +113,7 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="wow bounceInLeft" data-wow-delay="0.1s">
-							<h2>Introduction</h2>
+							<h2 class="text">Introduction</h2>
 						</div>
 						<div class="col-sm-7">
 							<p>HTTP is the way modern applications network. It’s how we exchange data &amp; media. Doing HTTP efficiently makes your stuff load faster and saves bandwidth.</p>
@@ -154,7 +152,7 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="wow bounceInLeft" data-wow-delay="0.1s">
-							<h2>Download / Maven</h2>
+							<h2 class="text">Build Project</h2>
 						</div>
 					</div>
 				</div>
@@ -163,23 +161,23 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="col-sm-7">
-							<h4>Download latest JAR / SRC</h4>
+							<p>You don&#39;t need any another library any more,the only thing to do is add the maven dependency or include the jar in your classpath.</p>
+							<h4>Download latest JAR</h4>
 							<p>
 								<a href="https://oss.sonatype.org/service/local/repositories/releases/content/io/github/xcr1234/moHttp/1.1/moHttp-1.1.jar" hidefocus="true" class="btn btn-default redBtn"><span class="glyphicon glyphicon-download-alt"></span> latest JAR</a>
 								<a href="https://github.com/xcr1234/mohttp/archive/master.zip" hidefocus="true" class="btn btn-default redBtn"><span class="glyphicon glyphicon-eye-open"></span> Download full sources</a>
 								<a href="https://github.com/xcr1234/mohttp/" target="_blank" class="btn btn-default redBtn" hidefocus="true"><span class="glyphicon glyphicon-edit"></span> View on Github</a>
 							</p>
-							<h4>Build Project With Maven</h4>
-							<p>You don&#39;t need any another library any more,the only thing to do is add the maven dependency or include the jar in your classpath.</p>
-							<code class="xml">
 							
-							<pre>
-&lt;dependency&gt;
+							<h4 class="text">Maven</h4>			
+<pre><code class="xml">&lt;dependency&gt;
   &lt;groupId&gt;io.github.xcr1234&lt;/groupId&gt;
   &lt;artifactId&gt;moHttp&lt;/artifactId&gt;
   &lt;version&gt;1.1&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
-							<h4>Working with apache HttpClient</h4>
+							<h4 class="text">Gradle</h4>
+<pre><code>compile <span class="hljs-keyword">'io.github.xcr1234:moHttp:1.1'</span></code></pre>							
+							<h4 class="text">Working with apache HttpClient</h4>
 							<p>if you include apache HttpClient in the classpath,mohttp will automatically work with HttpClient.</p>
 							<p>Requirement:</p>
 							<p>Httpclient 4.3.2+,file upload requires apache Httpmime.</p>
@@ -194,24 +192,24 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="wow bounceInLeft" data-wow-delay="0.1s">
-							<h2>Examples</h2>
+							<h2 class="text">Examples</h2>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="col-sm-8">
-							<h4>Get a URL</h4>
+							<h4 class="text">Get a URL</h4>
 							<p>This program downloads a URL and print its contents as a string.</p>
-							<pre><code class="java">
-public static String getUrl(String url) throws IOException, URISyntaxException {
+							
+<pre><code class="java">public static String getUrl(String url) throws IOException, URISyntaxException {
 	return Http.GET(url).execute().string();
 	// return Http.GET(url).execute().string("UTF-8");
 }</code></pre>
-							<h4>Post to a Server with cookie storage.</h4>
+							<h4 class="text">Post to a Server with cookie storage.</h4>
 							<p>This program posts data to a service.If you use the cookie storage,you must create a Client object first.</p>
-							<pre><code class="java">
-Response response = Http.<b>newClient</b>().POST("http://www.layoutit.com/en/login/do")
+							
+<pre><code class="java">Response response = Http.<b>newClient</b>().POST("http://www.layoutit.com/en/login/do")
 	.param("login[email]","abcd@qq.com")
 	.param("login[password]","abcd@qq.com")
 	.execute();	
@@ -227,10 +225,10 @@ if(code == StatusCode.SC_FOUND){
 }
 
 System.out.println(response.string());</code></pre>
-							<h4>File Upload</h4>
+							<h4 class="text">File Upload</h4>
 							<p>just invoke file mthod,file cotent types and content bytes will be written automatically.</p>
-							<pre><code class="java">
-File file = new File("C:\\myPicture.png");		
+							
+<pre><code class="java">File file = new File("C:\\myPicture.png");		
 
 Response response = Http.newClient().POST("http://chuantu.biz/upload.php")
 	.param("MAX_FILE_SIZE","200000000")
@@ -238,7 +236,7 @@ Response response = Http.newClient().POST("http://chuantu.biz/upload.php")
     
 System.out.println(response.string());
 </code></pre>
-							<h4>Get Cookies from header.</h4>
+							<h4 class="text">Get Cookies from header.</h4>
 							<p>cookies are stored in java.net.CookieStore,which is in Client object.</p>
 							<pre><code class="java">
 Http.newClient();  //create Client
@@ -250,10 +248,10 @@ response.getClient(); //get Client from Response
 <span class="hljs-title">java.net.CookieManager</span> cookieManager = client.getCookieManager();
 <span class="hljs-title">java.net.CookieStore</span> cookieStore = client.getCookieStore();</code></pre>
 							<p>if you are working with apache HttpClient,cookies are no longer stored in java.net.CookieStore, instead of org.apache.http.client.CookieStore</p>
-							<pre><code class="java">
-<span class="hljs-title">org.apache.http.client.CookieStore</span> cookieStore = 
-	HttpClientExecutor.getInstance().getCookieStore(client);</pre>
-						</code></div>
+							
+<pre><code class="java"><span class="hljs-title">org.apache.http.client.CookieStore</span> cookieStore = 
+	HttpClientExecutor.getInstance().getCookieStore(client);</code></pre>
+						</div>
 
 					</div>
 				</div>

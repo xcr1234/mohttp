@@ -538,3 +538,7 @@ strong {
 	}
 }
 /*# sourceMappingURL=style.css.map */
+
+.text{
+	text-transform: none;
+}
