@@ -40,7 +40,7 @@
 
                 <activeByDefault>true</activeByDefault>
 
-                <jdk>1.7</jdk>
+                <jdk>${jdk.version}</jdk>
 
             </activation>
 
@@ -52,8 +52,8 @@
                         <artifactId>maven-compiler-plugin</artifactId>
                         <version>2.0.2</version>
                         <configuration>
-                            <source>1.7</source>
-                            <target>1.7</target>
+                            <source>${jdk.version}</source>
+                            <target>${jdk.version}</target>
                             <encoding>${encoding}</encoding>
                         </configuration>
                     </plugin>
@@ -91,6 +91,9 @@
                         <version>2.4</version>
                         <configuration>
                             <attach>true</attach>
+                            <charset>${encoding}</charset>
+                            <encoding>${encoding}</encoding>
+                            <docencoding>${encoding}</docencoding>
                         </configuration>
                         <executions>
                             <execution>
@@ -151,6 +154,7 @@
     <properties>
         <encoding>UTF-8</encoding>
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+        <jdk.version>1.7</jdk.version>
         <httpclient.version>4.3.2</httpclient.version>
     </properties>
 
@@ -172,11 +176,6 @@
             <artifactId>httpclient</artifactId>
             <version>${httpclient.version}</version>
             <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>1.2</version>
         </dependency>
     </dependencies>
 
