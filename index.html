@@ -170,20 +170,14 @@
 								<a href="https://github.com/xcr1234/mohttp/" target="_blank" class="btn btn-default redBtn" hidefocus="true"><span class="glyphicon glyphicon-edit"></span> View on Github</a>
 							</p>
 							<h4>Build Project With Maven</h4>
-							<p>To build a project with maven,you must add the thirdparty repository first.</p>
-							<pre><code class="xml">
-&lt;repositories&gt;
-	&lt;repository&gt;
-		&lt;id&gt;github&lt;/id&gt;
-		&lt;url&gt;https://raw.githubusercontent.com/xcr1234/mohttp/master/mvn-repo&lt;/url&gt;
-	&lt;/repository&gt;
-&lt;/repositories&gt;</code></pre><code class="xml">
-							<p>then add the dependency.</p>
+							<p>You don&#39;t need any another library any more,the only thing to do is add the maven dependency or include the jar in your classpath.</p>
+							<code class="xml">
+							
 							<pre>
 &lt;dependency&gt;
-  &lt;groupId&gt;com.mo&lt;/groupId&gt;
+  &lt;groupId&gt;io.github.xcr1234&lt;/groupId&gt;
   &lt;artifactId&gt;moHttp&lt;/artifactId&gt;
-  &lt;version&gt;1.0&lt;/version&gt;
+  &lt;version&gt;1.1&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 							<h4>Working with apache HttpClient</h4>
 							<p>if you include apache HttpClient in the classpath,mohttp will automatically work with HttpClient.</p>
