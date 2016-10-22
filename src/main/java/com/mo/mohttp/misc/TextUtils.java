@@ -20,7 +20,7 @@ public final class TextUtils {
     private TextUtils(){}
 
     /**
-     * Returns true if the parameter is null or of zero length
+     * @return Returns true if the parameter is null or of zero length
      */
     public static boolean isEmpty(final CharSequence s) {
         if (s == null) {
@@ -30,7 +30,7 @@ public final class TextUtils {
     }
 
     /**
-     * Returns true if the parameter is null or contains only whitespace
+     * @return Returns true if the parameter is null or contains only whitespace
      */
     public static boolean isBlank(final CharSequence s) {
         if (s == null) {
@@ -44,9 +44,7 @@ public final class TextUtils {
         return true;
     }
 
-    /**
-     * @since 4.4
-     */
+
     public static boolean containsBlanks(final CharSequence s) {
         if (s == null) {
             return false;

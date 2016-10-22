@@ -13,6 +13,21 @@ import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.util.List;
 
+/**
+ * <pre>
+ * An entity composed of a list of url-encoded pairs. This is typically useful while sending an HTTP POST request.
+ * For example:
+ *
+ * parameters:
+ * a = 1
+ * b = 2
+ * c = 100
+ *
+ * FormUrlencodedEntity:
+ * a=1&amp;b=2&amp;c=100
+ * </pre>
+ *
+ */
 public class FormUrlencodedEntity implements Entity {
 
     private Charset charset;

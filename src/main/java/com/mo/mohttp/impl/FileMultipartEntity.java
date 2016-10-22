@@ -10,9 +10,48 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.util.List;
 
+/**
+ * <pre>
+ *  File upload support
+ *
+ *  HTTP protocol :
+ *
+ *  first ,generate a random string (boundary):
+ *  nb = "--" + boundary;
+ *
+ *  such as
+ *  boundary =  ---------------------------123u2abc2v1z1f6
+ *  nb = -----------------------------123u2abc2v1z1f6;
+ *
+ * second,write content Type in header field:
+ * {@link ContentType#FORM_FILE}+"; boundary="+boundary;
+ * in this example,content type is :
+ * multipart/form-data; boundary=---------------------------123u2abc2v1z1f6
+ *
+ * thirdly,write param fields:
+ *
+ * line break : \r\n
+ * lines:
+ * 1)
+ * 2) nb
+ * 3) Content-Disposition: form-data; name="name"   // form field name
+ * 4)
+ * 5) value bytes (form field value)
+ *
+ * fourthly, write file fields:
+ *
+ * line break : \r\n
+ *  * lines:
+ * 1)
+ * 2) nb
+ * 3) Content-Disposition: form-data; name="name";filename = "file name"   // name : form field name
+ * 4) Content-Type: file content Type
+ * 5) file bytes
+ * </pre>
+ */
 public class FileMultipartEntity implements Entity {
 
-    private String boundary;
+    private String boundary;  //http boundary
 
     private List<NameFilePair> nameFilePairs;
 
@@ -46,6 +85,8 @@ public class FileMultipartEntity implements Entity {
 
     @Override
     public String getContentType() {
+        //Content-Type: multipart/form-data; boundary=${bound}
+
         return ContentType.FORM_FILE+"; boundary="+boundary;
     }
 

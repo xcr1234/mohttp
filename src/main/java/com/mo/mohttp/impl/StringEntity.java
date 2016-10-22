@@ -8,6 +8,9 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.nio.charset.Charset;
 
+/**
+ * simple string entity
+ */
 public class StringEntity implements Entity{
 
     private String stringContent;

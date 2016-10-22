@@ -272,7 +272,7 @@ public class Request {
 
     /**
      * 向请求中直接写入字符串实体内容，此时将不能再写入请求参数。
-     * 设置后手动调用header(Headers.contentType,"content type")设置contentType
+     * 设置后建议手动调用header({@link Headers#contentType},"content type")设置contentType
      * @param str 字符串实体
      * @return request
      */
@@ -299,6 +299,7 @@ public class Request {
 
     /**
      * 向请求中直接写入xml实体内容。
+     * 并设置content Type为{@link ContentType#XML}
      * @param xml xml内容
      * @return request
      */
@@ -309,6 +310,7 @@ public class Request {
 
     /**
      * 向请求中直接写入json实体内容。
+     * 并设置content Type为{@link ContentType#JSON}
      * @param json json内容
      * @return request
      */

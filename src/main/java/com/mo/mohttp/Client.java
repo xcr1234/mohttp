@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * <pre>
  * Http客户端连接，用于存储cookie和一些公共的配置信息。
  *
  * 实例方法：
@@ -24,6 +25,7 @@ import java.util.List;
  * @see CookieManager
  * @see CookieStore
  * @see org.apache.http.client.CookieStore
+ * </pre>
  */
 public class Client {
 
@@ -47,11 +49,22 @@ public class Client {
         return userAgent;
     }
 
+    /**
+     * 向Client客户端中存入默认的header字段
+     * @param key 字段名，可取{@link com.mo.mohttp.constant.Headers}中的值，或者自定义值
+     * @param value 字段值
+     * @return client
+     */
     public Client header(String key,String value){
         headers.add(new NameValuePair(key,value));
         return this;
     }
 
+    /**
+     * 设置client中默认的user agent
+     * @param agent 可取{@link com.mo.mohttp.constant.Agents}中的常量值
+     * @return client
+     */
     public Client agent(String agent){
         this.userAgent = agent;
         return this;

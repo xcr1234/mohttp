@@ -14,7 +14,7 @@ import java.util.Map;
 public interface Response {
 
     /**
-     * 状态码
+     * 返回状态码
      * @return HTTP标准状态码，取{@link com.mo.mohttp.constant.StatusCode}中的常量值。
      * @throws IOException
      */

@@ -16,6 +16,8 @@ import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Map;
 
+import static com.mo.mohttp.constant.Headers.connection;
+
 
 public class UrlConnectionExecutor  implements Executor{
 
@@ -34,7 +36,7 @@ public class UrlConnectionExecutor  implements Executor{
 
     @Override
     public Response execute(Request request) throws IOException, URISyntaxException {
-        boolean writeData = request.getMethod() != Http.Method.GET;
+        boolean writeData = request.getMethod().writeData();
 
 
         Charset charset = request.getCharset();
@@ -45,23 +47,28 @@ public class UrlConnectionExecutor  implements Executor{
         List<NameFilePair> fileList = request.getFileList();
         StringBuilder stringEntity = request.getStringEntity();
         if(!writeData&&!fileList.isEmpty()){
-            throw new IllegalStateException("GET method does not support file upload connection!");
+            throw new IllegalStateException("GET method does not support file upload request!");
         }
         if(stringEntity!=null&&(!fileList.isEmpty()||!paramList.isEmpty())){
             throw new IllegalStateException("cannot get string entity while file or param entity is not empty!");
         }
 
-        URI u = writeData ? request.getUri(): TextUtils.buildURI(request.getUri(),charset,request.getParamList());
+        URI u = null;
+        if(writeData){
+            u = request.getUri();
+        }else{
+            u = TextUtils.buildURI(request.getUri(),charset,request.getParamList());
+        }
         URLConnection connection = null;
         try {
             URL url = u.toURL();
-            connection = request.getProxy() == null?url.openConnection():url.openConnection(request.getProxy());
+            connection = request.getProxy() == null?url.openConnection():url.openConnection(request.getProxy()); // open url connection
             connection.setDoInput(true);
             if(writeData){
                 connection.setDoOutput(true);
                 connection.setUseCaches(false);
             }
-            if(connection instanceof HttpURLConnection){
+            if(connection instanceof HttpURLConnection){ // this will always happen.
                 HttpURLConnection httpURLConnection = (HttpURLConnection)connection;
                 httpURLConnection.setRequestMethod(request.getMethod().name());
                 if(request.getAllowRedirect()!=null){
@@ -85,7 +92,7 @@ public class UrlConnectionExecutor  implements Executor{
                 for(NameValuePair pair:client.getHeaders()){
                     connection.setRequestProperty(pair.getName(),pair.getValue());
                 }
-                //设置cookie
+                //set cookies
                 if(client.getCookieManager()!=null){
                     CookieManager cookieManager = client.getCookieManager();
                     Map<String, List<String>> map = cookieManager.get(u,connection.getRequestProperties());
@@ -99,7 +106,7 @@ public class UrlConnectionExecutor  implements Executor{
 
 
             }
-            boolean flag = true;
+            boolean flag = true; // whether contentType has been written in header fields;
             for(NameValuePair pair:request.getHeaderList()){
                 connection.setRequestProperty(pair.getName(),pair.getValue());
                 if(Headers.contentType.equalsIgnoreCase(pair.getName())){
@@ -109,7 +116,7 @@ public class UrlConnectionExecutor  implements Executor{
 
             if(writeData){
                 connection.setDoOutput(true);
-                Entity entity = null;
+                Entity entity = null; // data entity
                 if(fileList.isEmpty()){
                     entity = new FormUrlencodedEntity(paramList,charset);
                 }else{
@@ -121,6 +128,7 @@ public class UrlConnectionExecutor  implements Executor{
                 }
 
                 if(flag) connection.setRequestProperty(Headers.contentType,entity.getContentType());
+                    // if content type has not been written in header fields,write entity default content type ( always ContentType.FORM_DEFAULT).
                 DataOutputStream outputStream = new DataOutputStream(connection.getOutputStream());
                 entity.writeTo(outputStream);
 
@@ -128,7 +136,7 @@ public class UrlConnectionExecutor  implements Executor{
             }
             if (request.getClient()!=null){
                 Map<String, List<String>> headerFields = connection.getHeaderFields();
-                request.getClient().getCookieManager().put(u,headerFields);
+                request.getClient().getCookieManager().put(u,headerFields); //automatically put cookies in response headers to cookie store.
             }
 
             return new UrlConnectionResponse(connection,request);

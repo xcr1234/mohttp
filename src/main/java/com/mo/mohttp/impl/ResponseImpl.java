@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.List;
 
+/**
+ * Response wrapper
+ */
 public abstract class ResponseImpl implements Response {
 
     private Request request;
