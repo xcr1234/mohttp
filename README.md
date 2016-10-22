@@ -36,6 +36,6 @@ Maven
 
 gradle
 
-`compile \'io.github.xcr1234:moHttp:1.1\'`
+`compile 'io.github.xcr1234:moHttp:1.1'`
 
 
