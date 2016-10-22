@@ -28,20 +28,14 @@ Maven
 
 ```xml
 <dependency>
-  <groupId>com.mo</groupId>
+  <groupId>io.github.xcr1234</groupId>
   <artifactId>moHttp</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
 </dependency>
-
-
-    <repositories>
-        <repository>
-            <id>github</id>
-            <url>https://raw.githubusercontent.com/xcr1234/mohttp/master/mvn-repo</url>
-
-        </repository>
-    </repositories>
 ```
 
+gradle
+
+`compile \'io.github.xcr1234:moHttp:1.1\'`
 
 
