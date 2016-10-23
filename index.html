@@ -230,9 +230,11 @@ System.out.println(response.string());</code></pre>
 							
 <pre><code class="java">File file = new File("C:\\myPicture.png");		
 
-Response response = Http.newClient().POST("http://chuantu.biz/upload.php")
+Response response = Http.newClient()
+	.POST("http://chuantu.biz/upload.php")
 	.param("MAX_FILE_SIZE","200000000")
-    .file("uploadimg",file).execute();
+	.file("uploadimg",file)
+	.execute();
     
 System.out.println(response.string());
 </code></pre>
@@ -250,7 +252,11 @@ response.getClient(); //get Client from Response
 							<p>if you are working with apache HttpClient,cookies are no longer stored in java.net.CookieStore, instead of org.apache.http.client.CookieStore</p>
 							
 <pre><code class="java"><span class="hljs-title">org.apache.http.client.CookieStore</span> cookieStore = 
-	HttpClientExecutor.getInstance().getCookieStore(client);</code></pre>
+	HttpClientExecutor.getInstance().getCookieStore(client);
+	
+<span class="hljs-title">org.apache.http.client.HttpClient</span> httpClient = 
+	HttpClientExecutor.getInstance().getHttpClient(client);
+</code></pre>
 						</div>
 
 					</div>
