@@ -62,7 +62,7 @@ public class FileMultipartEntity implements Entity {
     private String nb;
 
     public FileMultipartEntity(List<NameValuePair> nameValuePairList, List<NameFilePair> nameFilePairs,Charset charset){
-        boundary = "---------------------------" + TextUtils.randomString(13);
+        boundary = "---------------------------MoHttpBoundary" + TextUtils.randomString(13);
         nb = "--"+boundary;
         this.nameFilePairs = nameFilePairs;
         this.nameValuePairs = nameValuePairList;
@@ -127,7 +127,7 @@ public class FileMultipartEntity implements Entity {
     private long finished = 0;
 
     private void writeValue(DataOutputStream outputStream,File file) throws IOException{
-        String contentType = ContentType.findMimeByExtension(TextUtils.fileExt(file.getName()));
+        String contentType = ContentType.findMimeByExtension(TextUtils.fileExtension(file.getName()));
 
         outputStream.writeBytes("; filename=\""+file.getName()+"\"\r\n");
         outputStream.writeBytes("\r\n");

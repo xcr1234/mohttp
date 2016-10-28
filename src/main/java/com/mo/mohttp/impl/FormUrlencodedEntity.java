@@ -68,12 +68,16 @@ public class FormUrlencodedEntity implements Entity {
     public void writeTo(DataOutputStream out) throws IOException {
         for(int i=0;i<paramList.size();i++){
             NameValuePair pair = paramList.get(i);
+            String name = pair.getName();
+            String value = pair.getValue();
             if(i>0){
                 out.writeBytes("&");
             }
-            out.writeBytes(URLEncoder.encode(pair.getName(),charset.displayName()));
-            out.writeBytes("=");
-            out.writeBytes(URLEncoder.encode(pair.getValue(),charset.displayName()));
+            out.writeBytes(URLEncoder.encode(name,charset.displayName()));
+            if(value!=null){
+                out.writeBytes("=");
+                out.writeBytes(URLEncoder.encode(pair.getValue(),charset.displayName()));
+            }
         }
     }
 }

@@ -3,7 +3,6 @@ package com.mo.mohttp.impl;
 import com.mo.mohttp.Client;
 import com.mo.mohttp.Request;
 import com.mo.mohttp.Response;
-import com.mo.mohttp.misc.ByteArrayOutputStream;
 import com.mo.mohttp.misc.IOUtils;
 
 import javax.imageio.ImageIO;
@@ -38,11 +37,17 @@ public abstract class ResponseImpl implements Response {
     }
 
     public String string(String encoding) throws IOException {
+        if(encoding==null){
+            return string();
+        }
         return IOUtils.toString(stream(),encoding);
     }
 
     @Override
     public String string(Charset charset) throws IOException {
+        if(charset == null){
+            return string();
+        }
         return IOUtils.toString(stream(),charset);
     }
 
@@ -51,9 +56,7 @@ public abstract class ResponseImpl implements Response {
     }
 
     public byte[] bytes() throws IOException {
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        IOUtils.copy(stream(),byteArrayOutputStream);
-        return byteArrayOutputStream.toByteArray();
+       return IOUtils.toByteArray(stream());
     }
 
     @Override

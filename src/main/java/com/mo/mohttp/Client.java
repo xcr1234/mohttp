@@ -1,7 +1,12 @@
 package com.mo.mohttp;
 
 
+import com.mo.mohttp.anno.NotNull;
+import com.mo.mohttp.anno.NullAble;
+import com.mo.mohttp.anno.ThreadSafe;
 import com.mo.mohttp.http.NameValuePair;
+import com.mo.mohttp.misc.Args;
+import sun.management.resources.agent;
 
 import java.net.*;
 import java.util.ArrayList;
@@ -27,6 +32,7 @@ import java.util.List;
  * @see org.apache.http.client.CookieStore
  * </pre>
  */
+@ThreadSafe
 public class Client {
 
     private CookieManager cookieManager;
@@ -34,6 +40,8 @@ public class Client {
     private List<NameValuePair> headers;
 
     private String userAgent;
+
+    private Proxy proxy;
 
     public Client(){
         cookieManager = new CookieManager();
@@ -55,7 +63,8 @@ public class Client {
      * @param value 字段值
      * @return client
      */
-    public Client header(String key,String value){
+    public Client header(@NotNull String key,@NullAble String value){
+        Args.notNull("key","header field key");
         headers.add(new NameValuePair(key,value));
         return this;
     }
@@ -65,25 +74,34 @@ public class Client {
      * @param agent 可取{@link com.mo.mohttp.constant.Agents}中的常量值
      * @return client
      */
-    public Client agent(String agent){
+    public Client agent(@NullAble String agent){
         this.userAgent = agent;
         return this;
 
     }
 
-    public Request GET(URI uri){
+    public Client proxy(@NullAble Proxy proxy){
+        this.proxy = proxy;
+        return this;
+    }
+
+    public Proxy getProxy() {
+        return proxy;
+    }
+
+    public Request GET(@NotNull URI uri){
         return uri(uri);
     }
 
-    public Request GET(String uri){
+    public Request GET(@NotNull String uri){
         return uri(uri);
     }
 
-    public Request POST(URI uri){
+    public Request POST(@NotNull URI uri){
         return uri(uri).method(Http.Method.POST);
     }
 
-    public Request POST(String uri){
+    public Request POST(@NotNull String uri){
         return uri(uri).method(Http.Method.POST);
     }
 
@@ -95,11 +113,11 @@ public class Client {
         return cookieManager;
     }
 
-    public Request uri(URI uri){
+    public Request uri(@NotNull URI uri){
         return new Request(this,uri);
     }
 
-    public Request uri(String uri){
+    public Request uri(@NotNull String uri){
         return new Request(this,uri);
     }
 }

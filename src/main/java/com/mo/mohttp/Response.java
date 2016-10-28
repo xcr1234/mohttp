@@ -1,6 +1,9 @@
 package com.mo.mohttp;
 
 
+import com.mo.mohttp.anno.NotNull;
+import com.mo.mohttp.anno.NullAble;
+
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,7 +36,7 @@ public interface Response {
      * @return 转换后的字符串
      * @throws IOException
      */
-    String string(String encoding) throws IOException;
+    String string(@NullAble String encoding) throws IOException;
 
     /**
      * 将response中的流转以字符串格式输出。
@@ -41,7 +44,7 @@ public interface Response {
      * @return 转换后的字符串
      * @throws IOException
      */
-    String string(Charset charset) throws IOException;
+    String string(@NullAble Charset charset) throws IOException;
 
     /**
      * 将response中的流转以图片格式输出。

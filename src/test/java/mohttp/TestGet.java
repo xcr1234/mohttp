@@ -12,7 +12,7 @@ import com.mo.mohttp.constant.Headers;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
-public class Test {
+public class TestGet {
     public static void main(String[] args) throws Exception {
 
         Client client = Http.newClient();
@@ -21,7 +21,7 @@ public class Test {
         final Request request = client.uri("http://apis.baidu.com/heweather/weather/free").method(Method.GET)
                 .header(Headers.host, "apis.baidu.com")
                 .header("apikey", "5eca5cdb5c9b5f390fb24f7f2e3f0148").agent(Agents.Chrome)
-                .param("city", "北京");
+                .param("city=北京");  // .param("city","北京")
 
         Response response = request.execute();
 

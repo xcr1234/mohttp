@@ -7,6 +7,6 @@ import com.mo.mohttp.misc.TextUtils;
 public class TestContentTypes {
     public static void main(String[] args) {
         String filename = "C:\\a.txt";
-        System.out.println(ContentType.findMimeByExtension(TextUtils.fileExt(filename)));
+        System.out.println(ContentType.findMimeByExtension(TextUtils.fileExtension(filename)));
     }
 }

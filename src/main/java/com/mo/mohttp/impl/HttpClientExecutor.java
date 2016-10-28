@@ -151,7 +151,7 @@ public class HttpClientExecutor implements Executor{
                 for(NameFilePair pair:fileList){
                     //write file body ,requires http mime.
                     String filename = pair.getValue().getName();
-                    String content = ContentType.findMimeByExtension(TextUtils.fileExt(filename)); // contentType
+                    String content = ContentType.findMimeByExtension(TextUtils.fileExtension(filename)); // contentType
                     entityBuilder.addBinaryBody(pair.getName(),pair.getValue(), org.apache.http.entity.ContentType.create(content),filename);
                 }
                 for(NameValuePair pair:paramList){

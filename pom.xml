@@ -6,7 +6,7 @@
 
     <groupId>io.github.xcr1234</groupId>
     <artifactId>moHttp</artifactId>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>moHttp</name>
@@ -155,7 +155,9 @@
         <encoding>UTF-8</encoding>
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <jdk.version>1.7</jdk.version>
-        <httpclient.version>4.3.2</httpclient.version>
+        <httpclient.version>4.4</httpclient.version>
+        <commons.io.version>2.3</commons.io.version>
+        <jsoup.version>1.9.1</jsoup.version>
     </properties>
 
     <dependencies>
@@ -168,13 +170,20 @@
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>1.9.1</version>
+            <version>${jsoup.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>${httpclient.version}</version>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons.io.version}</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
@@ -185,7 +194,7 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
         <snapshotRepository>
-            <id>nexus</id>
+            <id>snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
 

@@ -1,7 +1,12 @@
 package com.mo.mohttp;
 
 
+import com.mo.mohttp.anno.NotNull;
+import com.mo.mohttp.anno.ThreadSafe;
+
 import java.net.URI;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * <pre>
@@ -10,6 +15,7 @@ import java.net.URI;
  * https://xcr1234.github.io/mohttp/
  * </pre>
  */
+@ThreadSafe
 public final class Http {
 
     private Http(){}
@@ -48,19 +54,19 @@ public final class Http {
     }
 
 
-    public static Request GET(URI uri){
+    public static Request GET(@NotNull URI uri){
         return new Request(uri);
     }
 
-    public static Request GET(String uri){
+    public static Request GET(@NotNull String uri){
         return new Request(uri);
     }
 
-    public static Request POST(String uri){
+    public static Request POST(@NotNull String uri){
         return new Request(uri).method(Method.POST);
     }
 
-    public static Request POST(URI uri){
+    public static Request POST(@NotNull URI uri){
         return new Request(uri).method(Method.POST);
     }
 
@@ -71,4 +77,14 @@ public final class Http {
         System.setProperty("jsse.enableSNIExtension", "false");
     }
 
+    private static ExecutorService executorService = null;
+
+    public static ExecutorService getExecutorService() {
+        synchronized (Http.class){
+            if(executorService == null){
+                executorService = Executors.newCachedThreadPool();
+            }
+            return executorService;
+        }
+    }
 }

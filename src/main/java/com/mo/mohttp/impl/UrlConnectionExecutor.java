@@ -38,7 +38,7 @@ public class UrlConnectionExecutor  implements Executor{
     public Response execute(Request request) throws IOException, URISyntaxException {
         boolean writeData = request.getMethod().writeData();
 
-
+        Client client = request.getClient();
         Charset charset = request.getCharset();
         if(request.getCharset() == null){
             charset = Charset.defaultCharset();
@@ -62,7 +62,15 @@ public class UrlConnectionExecutor  implements Executor{
         URLConnection connection = null;
         try {
             URL url = u.toURL();
-            connection = request.getProxy() == null?url.openConnection():url.openConnection(request.getProxy()); // open url connection
+
+            Proxy proxy = null;
+            if(client!=null&&client.getProxy()!=null){
+                proxy = client.getProxy();
+            }
+            if(request.getProxy()!=null){
+                proxy = request.getProxy();
+            }
+            connection = proxy == null?url.openConnection():url.openConnection(proxy); // open url connection
             connection.setDoInput(true);
             if(writeData){
                 connection.setDoOutput(true);
@@ -85,7 +93,6 @@ public class UrlConnectionExecutor  implements Executor{
                 connection.setRequestProperty(Headers.agent,request.getAgent());
             }
             if(request.getClient()!=null){
-                Client client = request.getClient();
                 if(request.getAgent()==null&&client.getUserAgent()!=null){
                     connection.setRequestProperty(Headers.agent,client.getUserAgent());
                 }
