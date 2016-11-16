@@ -8,5 +8,7 @@ public class TestContentTypes {
     public static void main(String[] args) {
         String filename = "C:\\a.txt";
         System.out.println(ContentType.findMimeByExtension(TextUtils.fileExtension(filename)));
+
+        System.out.println(ContentType.findMimeByExtension("zip"));
     }
 }

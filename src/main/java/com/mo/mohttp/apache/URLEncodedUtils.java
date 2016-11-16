@@ -1,7 +1,7 @@
 package com.mo.mohttp.apache;
 
 
-import com.mo.mohttp.http.NameValuePair;
+import com.mo.mohttp.pair.NameValuePair;
 import com.mo.mohttp.misc.Args;
 
 import java.nio.ByteBuffer;

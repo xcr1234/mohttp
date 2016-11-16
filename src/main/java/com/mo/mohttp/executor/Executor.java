@@ -1,6 +1,8 @@
-package com.mo.mohttp;
+package com.mo.mohttp.executor;
 
 
+import com.mo.mohttp.Request;
+import com.mo.mohttp.Response;
 import com.mo.mohttp.anno.ThreadSafe;
 
 import java.io.IOException;

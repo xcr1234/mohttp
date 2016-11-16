@@ -1,6 +1,6 @@
 package com.mo.mohttp.apache;
 
-import com.mo.mohttp.http.NameValuePair;
+import com.mo.mohttp.pair.NameValuePair;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * org.apache.http.client.utils.URIBuilder
+ * org.apache.pair.client.utils.URIBuilder
  * apache httpclient中断URIBuilder的复制品。
  * 
  * URIBuilder确实是一个很方便的类，但需要导入httpclient包才能使用，这里我将该类与部分依赖提取了出来，不用导入任何jar包就可以使用了。

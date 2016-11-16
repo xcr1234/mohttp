@@ -4,9 +4,8 @@ package com.mo.mohttp;
 import com.mo.mohttp.anno.NotNull;
 import com.mo.mohttp.anno.NullAble;
 import com.mo.mohttp.anno.ThreadSafe;
-import com.mo.mohttp.http.NameValuePair;
+import com.mo.mohttp.pair.NameValuePair;
 import com.mo.mohttp.misc.Args;
-import sun.management.resources.agent;
 
 import java.net.*;
 import java.util.ArrayList;
@@ -25,7 +24,7 @@ import java.util.List;
  * java.net.CookieManager cookieManager = client.getCookieManager();
  * java.net.CookieStore cookieStore = client.getCookieStore();
  * 如果classpath中有httpclient，则应该是：
- * org.apache.http.client.CookieStore cookieStore =
+ * org.apache.pair.client.CookieStore cookieStore =
     HttpClientExecutor.getInstance().getCookieStore(client);
  * @see CookieManager
  * @see CookieStore

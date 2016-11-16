@@ -1,14 +1,12 @@
-package com.mo.mohttp.impl;
+package com.mo.mohttp.entity;
 
 
 import com.mo.mohttp.constant.ContentType;
-import com.mo.mohttp.http.Entity;
-import com.mo.mohttp.http.NameValuePair;
+import com.mo.mohttp.pair.NameValuePair;
 
 
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.util.List;

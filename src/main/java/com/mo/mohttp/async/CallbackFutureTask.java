@@ -12,6 +12,7 @@ public class CallbackFutureTask extends FutureTask<Response> {
 
     private HttpCallback asyncCallback;
 
+
     public CallbackFutureTask(Callable<Response> callable, HttpCallback asyncCallback) {
         super(callable);
         this.asyncCallback = asyncCallback;
@@ -23,13 +24,15 @@ public class CallbackFutureTask extends FutureTask<Response> {
             asyncCallback.cancelled();
             return;
         }
-        try {
-            Response response = get();
-            asyncCallback.complete(response);
-        }catch (InterruptedException|IOException e){
-            asyncCallback.failed(e);
-        }catch (ExecutionException ex){
-            asyncCallback.failed(ex.getCause());
+        if(isDone()){
+            try {
+                Response response = get();
+                asyncCallback.complete(response);
+            }catch (InterruptedException|IOException e){
+                asyncCallback.failed(e);
+            }catch (ExecutionException ex){
+                asyncCallback.failed(ex.getCause());
+            }
         }
     }
 }

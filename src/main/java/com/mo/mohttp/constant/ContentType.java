@@ -1,11 +1,14 @@
 package com.mo.mohttp.constant;
 
+import com.mo.mohttp.anno.NotThreadSafe;
+
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * 表示常见的 ContentType，和用后缀名寻找ContentType
  */
+@NotThreadSafe
 public final class ContentType {
 
     private ContentType(){}
@@ -43,7 +46,6 @@ public final class ContentType {
         }
         return type;
     }
-
     public static void putMime(String extension,String mime){
         mapping.put(extension,mime);
     }

@@ -24,5 +24,17 @@ public final class Headers {
 
     public static final String cacheControl = "Cache-Control";
 
+    public static final String acceptEncoding = "Accept-Encoding";
+
+    public static final String contentEncoding = "Content-Encoding";
+
+    public static final String transerEncoding = "Transfer-Encoding";
+
+    public static final String vary = "Vary";
+
+    public static final String expires = "Expires";
+
+
+
 
 }

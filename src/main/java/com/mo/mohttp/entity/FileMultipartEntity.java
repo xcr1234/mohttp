@@ -1,9 +1,8 @@
-package com.mo.mohttp.impl;
+package com.mo.mohttp.entity;
 
 import com.mo.mohttp.constant.ContentType;
-import com.mo.mohttp.http.Entity;
-import com.mo.mohttp.http.NameFilePair;
-import com.mo.mohttp.http.NameValuePair;
+import com.mo.mohttp.pair.NameFilePair;
+import com.mo.mohttp.pair.NameValuePair;
 import com.mo.mohttp.misc.TextUtils;
 
 import java.io.*;
@@ -51,7 +50,7 @@ import java.util.List;
  */
 public class FileMultipartEntity implements Entity {
 
-    private String boundary;  //http boundary
+    private String boundary;  //pair boundary
 
     private List<NameFilePair> nameFilePairs;
 
@@ -62,7 +61,7 @@ public class FileMultipartEntity implements Entity {
     private String nb;
 
     public FileMultipartEntity(List<NameValuePair> nameValuePairList, List<NameFilePair> nameFilePairs,Charset charset){
-        boundary = "---------------------------MoHttpBoundary" + TextUtils.randomString(13);
+        boundary = "---------------------------Boundary" + TextUtils.randomString(13);
         nb = "--"+boundary;
         this.nameFilePairs = nameFilePairs;
         this.nameValuePairs = nameValuePairList;

@@ -1,12 +1,13 @@
-package com.mo.mohttp.impl;
+package com.mo.mohttp.executor;
 
 
 import com.mo.mohttp.*;
 import com.mo.mohttp.constant.ContentType;
-import com.mo.mohttp.http.NameFilePair;
-import com.mo.mohttp.http.NameValuePair;
+import com.mo.mohttp.pair.NameFilePair;
+import com.mo.mohttp.pair.NameValuePair;
 import com.mo.mohttp.misc.Args;
 import com.mo.mohttp.misc.TextUtils;
+import com.mo.mohttp.response.HttpClientResponse;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
@@ -15,6 +16,7 @@ import org.apache.http.client.CookieStore;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.entity.StringEntity;
@@ -35,7 +37,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class HttpClientExecutor implements Executor{
+public class HttpClientExecutor implements Executor {
 
 
 
@@ -67,6 +69,7 @@ public class HttpClientExecutor implements Executor{
     private Map<Client,HttpClient> clientHttpClientMap = new ConcurrentHashMap<>();
 
     @Override
+    @SuppressWarnings("deprecated")
     public Response execute(Request request)  throws IOException, URISyntaxException {
         Client client = request.getClient();
         HttpClient httpClient = null;
@@ -128,7 +131,7 @@ public class HttpClientExecutor implements Executor{
             builder.setRedirectsEnabled(request.getAllowRedirect());
         }
         if(request.getProxy()!=null&&request.getProxy().address() instanceof InetSocketAddress){
-            //cast java.net.Proxy -> org.apache.http.HttpHost
+            //cast java.net.Proxy -> org.apache.pair.HttpHost
             Proxy proxy = request.getProxy();
             InetSocketAddress address = (InetSocketAddress) proxy.address();
             HttpHost httpHost = new HttpHost(address.getAddress());
@@ -149,7 +152,7 @@ public class HttpClientExecutor implements Executor{
                 MultipartEntityBuilder entityBuilder = MultipartEntityBuilder.create();
                 entityBuilder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
                 for(NameFilePair pair:fileList){
-                    //write file body ,requires http mime.
+                    //write file body ,requires pair mime.
                     String filename = pair.getValue().getName();
                     String content = ContentType.findMimeByExtension(TextUtils.fileExtension(filename)); // contentType
                     entityBuilder.addBinaryBody(pair.getName(),pair.getValue(), org.apache.http.entity.ContentType.create(content),filename);
@@ -169,6 +172,33 @@ public class HttpClientExecutor implements Executor{
             return new HttpClientResponse(httpResponse,request);
         }finally {
             httpRequestBase.abort();
+        }
+    }
+
+    private class MoHttpRequestBase extends HttpEntityEnclosingRequestBase {
+        private Http.Method method;
+
+        public MoHttpRequestBase(Http.Method method) {
+            this.method = method;
+        }
+
+
+        public String getMethod() {
+            return method.name();
+        }
+
+        public MoHttpRequestBase(){
+            super();
+        }
+
+        public MoHttpRequestBase(String uri){
+            super();
+            setURI(URI.create(uri));
+        }
+
+        public MoHttpRequestBase(URI uri){
+            super();
+            setURI(uri);
         }
     }
 

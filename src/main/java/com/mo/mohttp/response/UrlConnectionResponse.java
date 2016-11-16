@@ -1,10 +1,9 @@
-package com.mo.mohttp.impl;
+package com.mo.mohttp.response;
 
 
 import com.mo.mohttp.Request;
 import com.mo.mohttp.misc.IOUtils;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -12,7 +11,7 @@ import java.net.URLConnection;
 import java.util.List;
 import java.util.Map;
 
-public class UrlConnectionResponse extends ResponseImpl {
+public class UrlConnectionResponse extends AbstractResponse {
 
     private URLConnection urlConnection;
 

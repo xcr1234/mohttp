@@ -12,11 +12,12 @@ import com.mo.mohttp.async.CallbackFutureTask;
 import com.mo.mohttp.constant.Agents;
 import com.mo.mohttp.constant.ContentType;
 import com.mo.mohttp.constant.Headers;
-import com.mo.mohttp.http.NameFilePair;
-import com.mo.mohttp.http.NameValuePair;
+import com.mo.mohttp.executor.Executor;
+import com.mo.mohttp.pair.NameFilePair;
+import com.mo.mohttp.pair.NameValuePair;
 
-import com.mo.mohttp.impl.HttpClientExecutor;
-import com.mo.mohttp.impl.UrlConnectionExecutor;
+import com.mo.mohttp.executor.HttpClientExecutor;
+import com.mo.mohttp.executor.UrlConnectionExecutor;
 import com.mo.mohttp.misc.Args;
 import com.mo.mohttp.misc.Classes;
 import static com.mo.mohttp.misc.Classes.*;
@@ -475,8 +476,8 @@ public class Request {
     public Future<Response> execute(@NotNull ExecutorService executorService,@NotNull  HttpCallback callback){
         Args.notNull(executorService,"Executor service");
         Args.notNull(callback,"async request callback");
-        HttpCallAble callAble = new HttpCallAble(this);
-        CallbackFutureTask futureTask = new CallbackFutureTask(callAble,callback);
+        HttpCallAble callAble = new HttpCallAble(this); //CallAble
+        CallbackFutureTask futureTask = new CallbackFutureTask(callAble,callback);//future task
         return (Future<Response>) executorService.submit(futureTask);
     }
 

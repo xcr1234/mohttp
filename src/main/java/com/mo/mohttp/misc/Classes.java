@@ -3,7 +3,7 @@ package com.mo.mohttp.misc;
 
 public final class Classes {
     private Classes(){}
-    public static final String httpClient = "org.apache.http.client.HttpClient";
+    public static final String httpClient = "org.apache.pair.client.HttpClient";
 
     public static final String commonsIO = "org.apache.commons.io.IOUtils";
 

@@ -1,4 +1,4 @@
-package com.mo.mohttp.impl;
+package com.mo.mohttp.response;
 
 import com.mo.mohttp.Client;
 import com.mo.mohttp.Request;
@@ -14,11 +14,11 @@ import java.util.List;
 /**
  * Response wrapper
  */
-public abstract class ResponseImpl implements Response {
+public abstract class AbstractResponse implements Response {
 
     private Request request;
 
-    protected ResponseImpl(Request request){
+    protected AbstractResponse(Request request){
         this.request = request;
     }
 

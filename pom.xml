@@ -6,7 +6,7 @@
 
     <groupId>io.github.xcr1234</groupId>
     <artifactId>moHttp</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
     <name>moHttp</name>
@@ -20,11 +20,11 @@
         </license>
     </licenses>
     <developers>
-        <developer>
-            <name>misaka</name>
-            <email>530551426@qq.com</email>
-        </developer>
-    </developers>
+    <developer>
+        <name>misaka</name>
+        <email>530551426@qq.com</email>
+    </developer>
+</developers>
     <scm>
         <url>https://github.com/xcr1234/mohttp</url>
         <connection>scm:git:https://github.com/xcr1234/mohttp.git</connection>

@@ -18,15 +18,19 @@ public class TestAsync {
                 .header("apikey", "5eca5cdb5c9b5f390fb24f7f2e3f0148").agent(Agents.Chrome)
                 .param("city=北京");
 
+        final long t = System.currentTimeMillis();
+
         Future<Response> future = request.execute(new HttpCallback() {
             @Override
             public void complete(Response response) throws IOException {
                 System.out.println(response.string());
+                long time = System.currentTimeMillis() - t;
+                System.out.println("request cost "+time+" ms.");
             }
 
             @Override
             public void failed(Throwable e) {
-                System.out.println("fail!");
+                e.printStackTrace();
             }
 
             @Override
@@ -34,9 +38,6 @@ public class TestAsync {
                 System.out.println("cancelled!");
             }
         });
-        while (!future.isDone()){
-
-        }
         Http.getExecutorService().shutdown(); //关闭线程池资源
 
     }

@@ -1,4 +1,4 @@
-package com.mo.mohttp.impl;
+package com.mo.mohttp.response;
 
 
 import com.mo.mohttp.Request;
@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class HttpClientResponse extends ResponseImpl {
+public class HttpClientResponse extends AbstractResponse {
 
     private HttpResponse httpResponse;
 
@@ -69,10 +69,5 @@ public class HttpClientResponse extends ResponseImpl {
     @Override
     public int hashCode() {
         return httpResponse != null ? httpResponse.hashCode() : 0;
-    }
-
-    @Override
-    public String toString() {
-        return httpResponse.toString();
     }
 }

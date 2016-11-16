@@ -1,8 +1,8 @@
-package com.mo.mohttp.impl;
+package com.mo.mohttp.entity;
 
 
 import com.mo.mohttp.constant.ContentType;
-import com.mo.mohttp.http.Entity;
+import com.mo.mohttp.entity.Entity;
 
 import java.io.DataOutputStream;
 import java.io.IOException;

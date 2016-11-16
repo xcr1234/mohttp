@@ -4,6 +4,7 @@ package mohttp;
 import com.mo.mohttp.Http;
 import com.mo.mohttp.Request;
 import com.mo.mohttp.Response;
+import com.mo.mohttp.constant.Agents;
 import com.mo.mohttp.constant.StatusCode;
 import com.mo.mohttp.misc.TextUtils;
 import org.jsoup.Jsoup;
@@ -32,7 +33,7 @@ public class TestUpload {
                 .param("MAX_FILE_SIZE","200000000")
                 .file("uploadimg",file);
 
-        Response response = request.execute();
+        Response response = request.execURL();
 
         int code = response.statusCode();
         String html = response.string("UTF-8");

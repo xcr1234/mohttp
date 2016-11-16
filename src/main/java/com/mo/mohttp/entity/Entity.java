@@ -1,4 +1,4 @@
-package com.mo.mohttp.http;
+package com.mo.mohttp.entity;
 
 import java.io.DataOutputStream;
 import java.io.IOException;

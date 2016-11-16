@@ -2,7 +2,7 @@ package com.mo.mohttp.misc;
 
 
 import com.mo.mohttp.apache.URIBuilder;
-import com.mo.mohttp.http.NameValuePair;
+import com.mo.mohttp.pair.NameValuePair;
 import org.apache.commons.io.FilenameUtils;
 
 import java.io.UnsupportedEncodingException;

@@ -35,7 +35,7 @@ public final class Http {
             public boolean writeData() {
                 return false;
             }
-        };
+        },OPTIONS,TRACE;
 
         /**
          * whether information (in the form of an entity) is written in the Request-Line
@@ -49,8 +49,20 @@ public final class Http {
         }
     }
 
+    /**
+     * 创建一个新的Client对象。
+     * @return client
+     */
     public static Client newClient(){
         return new Client();
+    }
+
+    /**
+     * the alias of {@link #newClient()}
+     * @return new Client();
+     */
+    public static Client client(){
+        return newClient();
     }
 
 
@@ -79,6 +91,10 @@ public final class Http {
 
     private static ExecutorService executorService = null;
 
+    /**
+     * 获取mohttp线程池，也就是默认的线程池。
+     * @return 获取正在运行的异步http请求所使用的线程池（{@link Executors#newCachedThreadPool()}）
+     */
     public static ExecutorService getExecutorService() {
         synchronized (Http.class){
             if(executorService == null){

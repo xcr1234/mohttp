@@ -1,13 +1,17 @@
-package com.mo.mohttp.impl;
+package com.mo.mohttp.executor;
 
 
 import com.mo.mohttp.*;
 
 import com.mo.mohttp.constant.Headers;
-import com.mo.mohttp.http.Entity;
-import com.mo.mohttp.http.NameFilePair;
-import com.mo.mohttp.http.NameValuePair;
+import com.mo.mohttp.entity.Entity;
+import com.mo.mohttp.entity.FileMultipartEntity;
+import com.mo.mohttp.entity.FormUrlencodedEntity;
+import com.mo.mohttp.entity.StringEntity;
+import com.mo.mohttp.pair.NameFilePair;
+import com.mo.mohttp.pair.NameValuePair;
 import com.mo.mohttp.misc.TextUtils;
+import com.mo.mohttp.response.UrlConnectionResponse;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -16,10 +20,8 @@ import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Map;
 
-import static com.mo.mohttp.constant.Headers.connection;
 
-
-public class UrlConnectionExecutor  implements Executor{
+public class UrlConnectionExecutor  implements Executor {
 
     private UrlConnectionExecutor(){}
 
@@ -35,6 +37,7 @@ public class UrlConnectionExecutor  implements Executor{
     private static UrlConnectionExecutor instance ;
 
     @Override
+    @SuppressWarnings("deprecated")
     public Response execute(Request request) throws IOException, URISyntaxException {
         boolean writeData = request.getMethod().writeData();
 
