@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e376a0f-a96e-434f-9c40-1cac70e634f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/pair/Pair.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/MoHttpRequestBase.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Client.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Http.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Http.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Request.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Request.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/anno/NotNull.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/anno/NotNull.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/anno/NotThreadSafe.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/anno/NotThreadSafe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/anno/NullAble.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/anno/NullAble.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/anno/ThreadSafe.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/anno/ThreadSafe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/apache/URIBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/apache/URIBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/apache/URLEncodedUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/apache/URLEncodedUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/async/CallbackFutureTask.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/async/CallbackFutureTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/async/HttpCallback.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/async/HttpCallback.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/constant/ContentType.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/constant/ContentType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/constant/Headers.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/constant/Headers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/Classes.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/Classes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/misc/TextUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mohttp/TestAsync.java" afterPath="$PROJECT_DIR$/src/test/java/mohttp/TestAsync.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mohttp/TestContentTypes.java" afterPath="$PROJECT_DIR$/src/test/java/mohttp/TestContentTypes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mohttp/TestUpload.java" afterPath="$PROJECT_DIR$/src/test/java/mohttp/TestUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/Executor.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/executor/Executor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/http/Entity.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/entity/Entity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/http/NameFilePair.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/pair/NameFilePair.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/http/NameValuePair.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/pair/NameValuePair.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/FileMultipartEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/entity/FileMultipartEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/FormUrlencodedEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/entity/FormUrlencodedEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/HttpClientExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/executor/HttpClientExecutor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/HttpClientResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/response/HttpClientResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/ResponseImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/response/AbstractResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/StringEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/entity/StringEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/executor/UrlConnectionExecutor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/impl/UrlConnectionResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/mo/mohttp/response/UrlConnectionResponse.java" />
     </list>
     <ignored path="mohttp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,11 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
               <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -1192,12 +1169,12 @@
       <workItem from="1477642126037" duration="4611000" />
       <workItem from="1477653158480" duration="2449000" />
       <workItem from="1479105224361" duration="390000" />
-      <workItem from="1479262223255" duration="6529000" />
+      <workItem from="1479262223255" duration="6608000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48260000" />
+    <option name="totallyTimeSpent" value="48339000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1684,18 +1661,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
           <folding />
         </state>
       </provider>
