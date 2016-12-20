@@ -238,6 +238,24 @@ Response response = Http.newClient()
     
 System.out.println(response.string());
 </code></pre>
+<h4 class="text">Async HTTP Request</h4>
+<pre><code class="java">
+request.execute(new HttpCallback() {
+            @Override
+            public void complete(Response response) throws IOException {
+                System.out.println(response.string());
+            }
+
+            @Override
+            public void failed(Throwable e) {
+                System.out.println("fail!");
+            }
+
+            @Override
+            public void cancelled() {
+                System.out.println("cancelled!");
+            }
+});</code></pre>
 							<h4 class="text">Get Cookies from header.</h4>
 							<p>cookies are stored in java.net.CookieStore,which is in Client object.</p>
 							<pre><code class="java">
